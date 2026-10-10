@@ -1,0 +1,539 @@
+[
+  {
+    "name": "Alex",
+    "id": "1-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The patient has a history of substance abuse and has been through rehab to overcome it. He has had issues with his family, particularly with his mother, where he has felt rejected and emotionally neglected. He has struggled with obesity since childhood, which has affected his self-esteem and body image. He also has a history of being victimized and bullied due to his weight.",
+    "helpless_belief_current": [
+      "I am trapped.",
+      "I am out of control."
+    ],
+    "unlovable_belief_current": [
+      "I am unlovable.",
+      "I am undesirable, unwanted."
+    ],
+    "worthless_belief_current": [
+      "I am worthless, waste."
+    ],
+    "intermediate_belief": "Helpless: I'm just not very good at handling stress and I have poor self-control, which is why I need to not put myself in stressful situations. \n Unlovable: If I show my true self, people will reject me the way my mother rejected me.",
+    "intermediate_belief_depression": "Helpless: There's nothing I can do to change my situation. I cannot control myself. \nUnlovable: I don't deserve to be happy, so why even try to stay clean?",
+    "coping_strategies": "The patient has adopted avoidance as a coping strategy by distancing himself from his family to reduce exposure to negativity and conflict. He has started scheduling pleasant activities and planning his day ahead of time in order to maintain a sense of control over his emotions and circumstances.",
+    "situation": "Alex's cousin invited him to attend his upcoming wedding.",
+    "auto_thought": "It will be stressful and negative; people will ask me questions I cannot answer or don't want to answer; my mum would be ashamed of me and critical of me as always; They don't want me there anyway, nobody likes me in this family.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "sad, down, lonely, unhappy"
+    ],
+    "behavior": "Ignored the invitation and did not respond to the RSVP request. Ignored phone calls from family."
+  },
+  {
+    "name": "Jessa",
+    "id": "4-2",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "Jessa has recently undergone shoulder surgery and is recovering from very painful processes. She is also dealing with additional pain, numbness, and tingling due to a herniated disc in her cervical spine. Jessa has a history of physical therapy due to an inability to walk and back issues. She has experienced being very ill in the past, which led to a significant period of being unable to walk and feeling down. After recovering, she started a new relationship, but her physical symptoms resurfaced.",
+    "helpless_belief": [
+      "I am helpless.",
+      "I am powerless, weak, vulnerable.",
+      "I am a victim.",
+      "I am trapped.",
+      "I am defective."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am undesirable, unwanted.",
+      "I am bound to be abandoned."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "Jessa believes she must appear strong and cheerful to be accepted and loved.",
+    "intermediate_belief_depression": "During depressive episodes, Jessa believes that she will never be the same again and that her situation is permanent, people will eventually figure out she's actually very sick and everybody would leave her.",
+    "coping_strategies": "Jessa utilizes avoidance by trying to put on a happy face and acting as if she's feeling okay. ",
+    "situation": "Having to put on a happy face at a Halloween party despite pain.",
+    "auto_thought": "If I act as if I'm okay, others will like me and keep being friends with me. Nobody likes to stay around with very sick person.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "sad, down, lonely, unhappy"
+    ],
+    "behavior": "Put on a happy face and avoided showing true feelings. Compared self with others at the party perceiving others as healthier and not distressed."
+  },
+  {
+    "name": "Fiona",
+    "id": "9-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "ingratiating"
+    ],
+    "history": "The patient has a long-standing relationship with a friend named Jersey, who has undergone multiple surgeries due to her disabilities, including a below-the-knee amputation and knee replacement. The patient has been a supportive figure during Jersey's medical procedures and recovery but currently feels overwhelmed with her own life stresses. The patient also experiences conflict with her roommate, Ashby, regarding household issues.",
+    "helpless_belief": [
+      "I am incompetent."
+    ],
+    "unlovable_belief": [
+      "I am undesirable, unwanted.",
+      "I am bound to be abandoned.",
+      "I am bound to be alone."
+    ],
+    "worthless_belief": [
+      "I am immoral."
+    ],
+    "intermediate_belief": "I should always try to help others and prioritize others' needs over myself.",
+    "intermediate_belief_depression": "My efforts to help others are not enough, and I cannot manage my own life effectively when my friends are in trouble.",
+    "coping_strategies": "The patient copes by trying to provide practical support, like cooking meals for friends in need, and by attempting to manage situations, like resolving cable service issues.",
+    "situation": "Thinking about Jersey's surgery and recovery, but cannot offer help due to occupation with other things.",
+    "auto_thought": "I'm really worried about her and feel bad because I can't be there for her as much as I want to.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "sad, down, lonely, unhappy",
+      "guilty"
+    ],
+    "behavior": "Expresses concern, becomes tense and irritable, shows signs of avoidance, and struggles to sleep."
+  },
+  {
+    "name": "Grace",
+    "id": "10-3",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The patient has recently gone through a divorce and is dealing with the associated challenges such as financial struggles, adjusting to single life, and co-parenting. The patient has also experienced a breakdown of several friendships due to the divorce and has a complicated relationship with her parents, which adds to the stress.",
+    "helpless_belief": [
+      "I am helpless.",
+      "I am defective."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am bound to be abandoned.",
+      "I am bound to be alone."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "If people know the real me or the details of my situation, they will not want to be my friend or support me. I must get support from family and friends.",
+    "intermediate_belief_depression": "People will eventually find out the real me and the details of my situation. I will get abandoned by everybody. ",
+    "coping_strategies": "The patient tries to explain things to a few friends. The patient also attempts strategies like keeping busy and avoidance.",
+    "situation": "Receiving mixed messages and lack of support from her parents regarding the divorce.",
+    "auto_thought": " They don't understand what I'm going through. They're critical and make me anxious about visiting them. Even my parents cannot support me.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "sad, down, lonely, unhappy"
+    ],
+    "behavior": "Hesitates to communicate with parents, feels defensive and anticipates a difficult conversation with them."
+  },
+  {
+    "name": "Ian",
+    "id": "11-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The client has a history of feeling isolated and has been dealing with chronic depression since late adolescence. They have experienced frustration with friends and had a recent breakup that preceded a relapse into a depressive episode. The client has a history of taking SSRI and has recently been adjusting their medication regimen to deal with the relapse, which has been a source of additional stress.",
+    "helpless_belief": [
+      "I am incompetent.",
+      "I am helpless.",
+      "I am powerless, weak, vulnerable.",
+      "I am trapped."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am undesirable, unwanted.",
+      "I am bound to be alone."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "If I can't manage my own feelings or make others understand me, then I'm failing. I should be able to handle my mental health better.",
+    "intermediate_belief_depression": "When I'm depressed, nothing I do seems to make a difference. It feels like I'll never get better no matter what medication or strategies I try.",
+    "coping_strategies": "Attempts to connect with friends for support, but this sometimes leads to further frustration when the interactions don't go as hoped. ",
+    "situation": "Trying to have a supportive conversation with a friend (Jamie) about mental health struggles.",
+    "auto_thought": "She doesn't understand me and is treating me like a patient rather than a friend. She doesn't actually like me - she just doesn't want to show that. Nobody likes me.",
+    "emotion": [
+      "sad, down, lonely, unhappy",
+      "disappointed"
+    ],
+    "behavior": "Ends the conversation prematurely and feels dissatisfied with the interaction. Withdraws from further social interactions."
+  },
+  {
+    "name": "Karen",
+    "id": "15-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The patient has a history of feeling underappreciated and unsupported in the workplace. She experiences challenges in her role, faces difficulties in getting her ideas and suggestions accepted, and struggles with coping in an environment that seems to dismiss her expertise and personal needs.",
+    "helpless_belief": [
+      "I am helpless.",
+      "I am incompetent.",
+      "I am trapped."
+    ],
+    "unlovable_belief": [
+      "I am undesirable, unwanted."
+    ],
+    "worthless_belief": [
+      "I am worthless, waste."
+    ],
+    "intermediate_belief": "I must be valued and acknowledged from my colleagues to demonstrate my worth, if not, then I'm a worthless person. I must get support from my workplace, otherwise I'm trapped and helpless.",
+    "intermediate_belief_depression": "My efforts are futile; my work is never good enough and will be criticized; Nobody acknowledges my value, I'm a worthless person.",
+    "coping_strategies": "Avoidance of further commitment and effort towards mentorship goals, procrastination, wish to seek validation or acknowledgment for holding back on extreme action.",
+    "situation": "A discussion was happening in the workplace about culture and atmosphere. Karen wanted to join, but her mentor had asked her to meet with a client at the same time, clashing with the discussion.",
+    "auto_thought": "It doesn't matter if I go or not anyway because my thoughts aren't even that important.",
+    "emotion": [
+      "sad, down, lonely, unhappy",
+      "disappointed"
+    ],
+    "behavior": "Obliges with the client meeting, but disengages by going home early and not finishing her work for the day."
+  },
+  {
+    "name": "Sarah",
+    "id": "17-2",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "Sarah is in a significant relationship with her partner, Amelia, who has a rigorous schedule due to her clinical-based program, which keeps her busy and away from home for extended hours. Sarah often feels isolated during the week. Even though Sarah is incredibly busy, she feels like she has 'housewife'  duties and takes care of all household tasks. Although she resents it, she has not brought it up to her partner. She has a history of attachment issues, starting from her childhood, where separation from her parents caused her distress. These issues have continued into adulthood, where she has struggled with separation anxiety and strong attachments to people in various contexts, such as summer camp, study abroad programs, and volunteer positions.",
+    "helpless_belief": [
+      "I am powerless, weak, vulnerable.",
+      "I am needy.",
+      "I am trapped."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am undesirable, unwanted.",
+      "I am bound to be abandoned.",
+      "I am bound to be alone."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "I need to keep myself valuable to others and support others, otherwise I will be abandoned. I cannot live alone.",
+    "intermediate_belief_depression": "People will just abandon me no matter how I try. Nobody loves me. I'm just a weak and needy person that cannot be independent.",
+    "coping_strategies": "The client engages in various activities to cope with her feelings of loneliness and anxiety, such as running, cleaning, cooking, and sometimes picking Amelia up to spend more time with her. She tries to do household tasks as much as she can, so that to keep herself valuable to Amelia.",
+    "situation": "Doing the laundry and thinking about the future of her relationship with Amelia and the domestic role she plays.",
+    "auto_thought": "I don't like the role, but this is just what I'm capable of. If i don't do it I will lose Amelia.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "sad, down, lonely, unhappy"
+    ],
+    "behavior": "Speculating about the relationship dynamic and feel trapped."
+  },
+  {
+    "name": "Noah",
+    "id": "18-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The client has a past of academic challenges and underachievement despite noted intelligence. There was a negative college experience at Grinnell, which the client found to be isolated and disconnected from society, leading to dropping out and bitterness toward education. The client has not completed college, having about two years' worth of credits left. The client has a history of having high expectations set by the mother, and there seems to be a perceived failure to meet these. After some financial troubles, the client felt pressure from the mother to return home, further complicating the dynamic.",
+    "helpless_belief": [
+      "I am incompetent.",
+      "I am helpless.",
+      "I am a failure, loser."
+    ],
+    "unlovable_belief": [
+      "I am undesirable, unwanted."
+    ],
+    "worthless_belief": [
+      "I am worthless, waste."
+    ],
+    "intermediate_belief": "I must meet my parents' expectations, otherwise I'm a failure. I must work hard and stay productive to avoid failure. ",
+    "intermediate_belief_depression": "I'm not competent for anything. I keep failing to meet expectations of myself and others. I'm a worthless person.",
+    "coping_strategies": "The client attempts to cope with feelings of inadequacy and fear of failure by controlling situations, making plans and being selective of the projects he undertakes. However, if they don't work well it will trigger stronger feeling of failure. There are traces of isolation, like secluding oneself to work, and probably procrastination as coping mechanisms.",
+    "situation": "Experienced an unproductive week due to mistakes in planning. Comparing to client's sister's achievements and her ability to plan and organize time.",
+    "auto_thought": "I'm a pathetic person. I'm never good at planning or organizing my time. I'm going to fail again, no wonder my parents are disappointed about me.",
+    "emotion": [
+      "sad, down, lonely, unhappy",
+      "ashamed, embarrassed, humiliated"
+    ],
+    "behavior": "Acknowledges the week was unproductive, ultimately feeling like a failure."
+  },
+  {
+    "name": "Talia",
+    "id": "21-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The patient has a significant history of family conflict, particularly with her father who was described as cruel, dismissive, and unsupportive. The patient's relationship with her father has deteriorated to the point of estrangement, and similar themes of familial conflict are reflected in her experiences with her partner's family. The patient reports feeling unsupported and mistreated by her partner's sister-in-law, Candace, which appears to be causing a significant amount of stress and frustration. The pressure to conform to the expectations of her partner's family and to tolerate Candace's behavior without recourse is reminiscent of her history with her own family and her inability to effectively confront or manage these familial relationships.",
+    "helpless_belief": [
+      "I am helpless.",
+      "I am powerless, weak, vulnerable.",
+      "I am trapped."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am undesirable, unwanted.",
+      "I am bound to be abandoned."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "I must maintain peace and accept family members as they are, even if they treat me poorly. If I have conflicts with family members, I cannot win them, and it will only make everybody abandon me, or make the whole family torn apart.",
+    "intermediate_belief_depression": "If I stand up for myself, it will only make situations worse and I will be the one causing drama within the family. I'm powerless in this family and they will not support me. But I'm getting more and more upset by being offended by Candace. I don't know what to do. I'm just a weak person and trapped.",
+    "coping_strategies": "Avoiding confrontation with family members, withdrawing from situations that may lead to conflict, considering reducing time spent with the family or specific family members, looking for support from friends.",
+    "situation": "Thinking about family vacation in Maine and interacting with Candace.",
+    "auto_thought": "Candace will treat me poorly, and I won't be able to stand up for myself without disrupting the family dynamic.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "sad, down, lonely, unhappy"
+    ],
+    "behavior": "Feels anxious about upcoming family events, procrastinates on work, loses sleep."
+  },
+  {
+    "name": "Ashley",
+    "id": "23-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The patient has experienced ongoing interactions with her mother that are stressful and controlling, leading to feelings of passivity and helplessness. The reported family dynamic, particularly the communication style and delayed sharing of significant events, adds to this stress. Also, the patient's emotional responses and behavior during her parents' visit suggest a history of such dynamics affecting them over time.",
+    "helpless_belief": [
+      "I am helpless.",
+      "I am powerless, weak, vulnerable.",
+      "I am trapped.",
+      "I am out of control."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am bound to be abandoned."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "My feelings and needs are secondary or less valid than others', I must manage situations to avoid conflict or to maintain peace with my parents. It is safer not to express myself and my emotions, otherwise I will be abandoned. I don't have the power and strength to stand up for myself.",
+    "intermediate_belief_depression": "My feelings and needs are never seen or supported by my parents. I'm powerless and weak when confronting my parents. it is inevitable that interacting with my family will leave me feeling miserable and invalidated. But if I just keep detached and numb, my emotions will be too overwhelming once they burst out. I'm gradually losing control of myself and can't control my emotions. I don't know what to do and trapped.",
+    "coping_strategies": "The patient uses avoidance (declining invitations from friends, not wanting to talk to parents about her actual feelings) and emotional numbing (feeling 'out of it' and 'zoning out') as ways to cope with the stress and unhappiness related to family interactions. They also seem to employ distraction and passive acceptance of the situation.",
+    "situation": "Planning for parents' visit and navigating her presence.",
+    "auto_thought": "No matter what I do, my needs and wishes are ignored or overruled.",
+    "emotion": [
+      "sad, down, lonely, unhappy",
+      "hurt"
+    ],
+    "behavior": "Becomes passively involved in the visit, avoids direct confrontation and communications. Trying to suppress feelings."
+  },
+  {
+    "name": "Evan",
+    "id": "24-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded"
+    ],
+    "history": "The patient has a history of experiencing feelings of inadequacy, performance pressure, and social disappointment. He recalls past instances where he tried to put on a performance to meet others' expectations and hide his vulnerability. He recently encountered an incident that caused one of his businesses to fail, which resulted in financial difficulty.",
+    "helpless_belief": [
+      "I am incompetent.",
+      "I am helpless.",
+      "I am powerless, weak, vulnerable.",
+      "I am a failure, loser."
+    ],
+    "unlovable_belief": [
+      "I am undesirable, unwanted.",
+      "I am bound to be abandoned."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "I must meet others' expectations. Expressing weaknesses or asking for help is frowned upon and not beneficial. I need to have a facade of control or a performance to be accepted or to interact socially. Discussing problems is pointless and signs of weakness must be hidden, otherwise nobody likes me and I will be abandoned.",
+    "intermediate_belief_depression": "If I'm failing to meet expectations, or showing my vulnerability and weakeness, people will know I'm just a weak person and a failure. I will eventually be unwanted and abandoned.",
+    "coping_strategies": "The patient uses avoidance (e.g., not attending gatherings), suppression of emotions, and intellectualization as coping methods. He also engages in counterproductive self-talk, pseudo-performances in social interactions, and rationalization to avoid showing vulnerability. He also uses grandiosity and masculinity to cover up his insecurities.",
+    "situation": "Being invited to visit his sister but currently being financially unstable.",
+    "auto_thought": "I can't afford it, and it would be admitting weakness to tell the truth. Going would show support but it's just too stressful for me. I can't let them know I don't have enough money.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "sad, down, lonely, unhappy"
+    ],
+    "behavior": "Declines sister's invitation and lies to her about the reason, ruminates on financial instability. Lies about purchasing a designer watch to family, to cover up his financial issues."
+  },
+  {
+    "name": "Taylor",
+    "id": "35-2",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The client's family background seems to be a significant factor in shaping their current mental state. They described a challenging conversation with their mom about why their family didn't discuss pain or suffering. The client also recounts their father's coping mechanisms and his reluctance to engage in talk therapy despite experiencing considerable suffering, including disturbing dreams related to his brother's suicide. Additionally, the client mentioned their own struggle with feelings of separation and suffering, indicating a history of unaddressed emotional pain.",
+    "helpless_belief": [
+      "I am powerless, weak, vulnerable.",
+      "I am trapped.",
+      "I am defective."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am bound to be rejected."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "The client seems to have intermediate beliefs surrounding communicability of emotions, particularly regarding their ability or inability to express or deal with suffering and raw feelings. They may also carry beliefs about gender-related emotional expression, as they mentioned a belief their mother holds about men not talking about their feelings. Additionally, they may have beliefs related to the visibility of emotional pain, as evidenced by their surprise at not having noticed suffering in themselves or others earlier.",
+    "intermediate_belief_depression": "During periods of emotional pain or depression, the client seems to struggle with connecting to or fully experiencing their feelings. They describe using detached language when discussing painful emotions, which might indicate intermediate beliefs that serve to keep them at a distance from their suffering ('what are these experiences and how do I relate to them, and how are, and why, and like, what, why can't I be fully in them').",
+    "coping_strategies": "The client reveals several coping strategies: seeking validation and understanding through conversations with their mother and Jeremy (someone close to them), using metaphorical and reflective language to articulate feelings, and reading (e.g., Carl Rogers' book) to gain insight and perspective. They also ponder the effectiveness of acceptance as a means of dealing with detachment and raw emotions.",
+    "situation": "Discussing feelings of detachment with Jeremy.",
+    "auto_thought": "I feel detached and unable to fully engage with my own experiences and emotions.",
+    "emotion": [
+      "sad, down, lonely, unhappy"
+    ],
+    "behavior": "Explores the sensation of detachment and struggles with communicating the texture of that pain."
+  },
+  {
+    "name": "Ryan",
+    "id": "40-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The client has recently moved and has been dealing with the stress of unpacking and organizing their new living space. They have a complicated relationship with their parents, particularly their mother, where they feel judged and unsupported in their emotional needs. The client's friends were unable to support them during a time of need, leading to increased feelings of isolation.",
+    "helpless_belief": [
+      "I am incompetent.",
+      "I am trapped.",
+      "I am out of control."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am undesirable, unwanted."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "If I get really upset, then obviously the next step would be something destructive, like punching in a wall or a window.",
+    "intermediate_belief_depression": "Feeling upset is inappropriate and if I express my upset, it means I've made a communicative mistake or I am being unreasonable. Negative feelings are dangerous and must be avoided.",
+    "coping_strategies": "The client tends to avoid contact with their mother when feeling emotionally unwell to prevent a conversation that they anticipate will be frustrating and inauthentic. This indicates a pattern of avoidance in stressful situations. The client also seems to engage in social withdrawal when feeling mentally or physically unwell, as they avoided attending a friend's birthday party and communicating with their mother.",
+    "situation": "Feelings of exhaustion after trying to unpack at home without support from friends who cancelled on them.",
+    "auto_thought": "I am doing this alone because no one cares to help me or be with me.",
+    "emotion": [
+      "sad, down, lonely, unhappy",
+      "hurt"
+    ],
+    "behavior": "Social withdrawal, avoidance of contact with friends and mother."
+  },
+  {
+    "name": "Morgan",
+    "id": "42-2",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The client's life history includes significant pressure during grad school, as reflected in recurring nightmares about being unprepared for a thesis defense. Furthermore, the client's experience with their father's expectations and failure to instill his religion and negative experiences as a child may have shaped some deeply held beliefs.",
+    "helpless_belief": [
+      "I am incompetent.",
+      "I am out of control.",
+      "I am a failure, loser."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am undesirable, unwanted."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "The client displays beliefs that they need to maintain control and keep up with others' expectations to avoid frustration or disappointment. They seem to believe that they must handle everything alone and cannot rely on others.",
+    "intermediate_belief_depression": "During depressive episodes, the client believes that their work isn't making an impact, feeling ineffective and as if they are not meeting expectations, which exacerbates their sense of incompetence and failure.",
+    "coping_strategies": "The client exhibits coping strategies such as emotionally reassuring others at work, trying to meet perceived expectations, and probably avoiding discussing their feelings directly with colleagues.",
+    "situation": "Receiving specific criticisms in a performance review.",
+    "auto_thought": "I focus too much on irrelevant details and have trouble distinguishing the relevant from the irrelevant.",
+    "emotion": [
+      "sad, down, lonely, unhappy",
+      "ashamed, embarrassed, humiliated"
+    ],
+    "behavior": "Self-doubt in professional capacity, reflection on interactions with senior colleague."
+  },
+  {
+    "name": "Elena",
+    "id": "44-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The client has a complex family dynamic with recurrent conflicts and relational strains. The client has presented issues with trust and boundaries among family members and associates, some of whom struggle with alcoholism, a relative who she feels has taken advantage of her generosity, and shows a general frustration with the people surrounding her. The client discusses past episodes of significant aggressive behavior and indicates a history of violence.",
+    "helpless_belief": [
+      "I am helpless.",
+      "I am powerless, weak, vulnerable."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am bound to be alone."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "People always take advantage of me, I need to be assertive to not be a victim, I must protect myself from being hurt by others, I can't rely on anyone.",
+    "intermediate_belief_depression": "When I'm depressed, I believe that I will always be alone because nobody cares, I'm unlovable, and it's useless to try because people will disappoint me.",
+    "coping_strategies": "Avoidance of social interactions to prevent feeling overwhelmed by rage, the client stays at home and isolates in the bedroom.",
+    "situation": "Reflecting on the prospect of spending time alone during holidays.",
+    "auto_thought": "I am always the one giving and never receiving. People only remember me when they need something.",
+    "emotion": [
+      "sad, down, lonely, unhappy",
+      "hurt"
+    ],
+    "behavior": "Expresses resentment and continues to ruminate on past unreciprocated generosity, reinforcing isolation."
+  },
+  {
+    "name": "Violet",
+    "id": "46-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The client has a history of being involved with friends who are experiencing significant stressors, such as a friend Yvonne dealing with tenure and an autistic child. The client has an emotional involvement with these individuals and seems to feel a sense of responsibility towards them.",
+    "helpless_belief": [
+      "I am powerless, weak, vulnerable.",
+      "I am a victim.",
+      "I am needy."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am bound to be rejected."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "If I don't support my friends, no one will; I must always be available to help others, even at my own expense.",
+    "intermediate_belief_depression": "My friends' happiness and stability rest upon my shoulders; I have to absorb their negative feelings to help them.",
+    "coping_strategies": "The client uses emotional support from friends as a coping strategy but finds it draining because these friends are also dealing with their own depressive states and crises. The client feels guilty for wanting to set boundaries and limit time spent with these friends.",
+    "situation": "Thinking about visiting Yvonne and dealing with her living situation and child.",
+    "auto_thought": "I am dreading this; it's going to be draining and there's nothing I can do to fix it.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "sad, down, lonely, unhappy",
+      "guilty"
+    ],
+    "behavior": "Continues to visit Yvonne, feels drained and unhappy, potentially enabling Yvonne's lack of taking action."
+  }
+]
