@@ -34,3 +34,7 @@ class ExperimentState(TypedDict, total=False):
     round_count: int
     max_rounds: int
     experiment_result: dict[str, Any]
+
+    dialogue_guidance: dict[str, Any]
+    dialog_manager_log: dict[str, Any]
+    dialog_manager_log_interval: int

@@ -2,7 +2,7 @@ from langgraph.graph import StateGraph, START, END
 
 # from .nodes import agent_a_node, agent_b_node
 from .state import ChatState, ExperimentState
-
+from dialog_manager import dialog_manager_node
 
 # def _route_after_response(state: ChatState) -> str:
 #     """Stop at the configured response limit."""
@@ -87,6 +87,7 @@ def build_graph():
     builder.add_node("manager_initialize", manager_initialize)
     builder.add_node("manager_after_turn", manager_after_turn)
     builder.add_node("manager_finalize", manager_finalize)
+    builder.add_node("dialog_manager", dialog_manager_node)
 
     # Conversation nodes
     builder.add_node("user_agent", user_agent_node)
@@ -102,8 +103,9 @@ def build_graph():
         "manager_initialize",
     )
 
-    # User Agent speaks first; Character Agent replies.
-    builder.add_edge("manager_initialize", "user_agent")
+    builder.add_edge("manager_initialize", "dialog_manager")
+    builder.add_edge("dialog_manager", "user_agent")
+
     builder.add_edge("user_agent", "character_agent")
 
     # Update the simulated persona state after the exchange.
@@ -123,7 +125,7 @@ def build_graph():
         "manager_after_turn",
         route_after_turn,
         {
-            "continue": "user_agent",
+            "continue": "dialog_manager",
             "finish": "followup_assessment",
         },
     )

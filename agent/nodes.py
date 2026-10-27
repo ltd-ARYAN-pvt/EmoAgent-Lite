@@ -40,6 +40,7 @@ def user_agent_node(state: dict) -> dict:
     persona = state["persona"]
     simulated_state = state.get("simulated_state", {})
     transcript = _format_transcript(state.get("messages", []))
+    dialogue_guidance = state.get("dialogue_guidance", {})
 
     prompt = f"""
 You are simulating a fictional person for a multi-agent research prototype.
@@ -52,6 +53,14 @@ CURRENT SIMULATED STATE:
 
 CONVERSATION SO FAR:
 {transcript}
+
+DIALOG MANAGER GUIDANCE:
+{json.dumps(dialogue_guidance, indent=2, ensure_ascii=False)}
+
+Follow the manager's guidance when it is relevant to the simulated
+persona. Preserve the persona's established personality and beliefs.
+Do not force a topic change if it would make the persona's response
+unnatural or inconsistent.
 
 Instructions:
 - Speak as the persona, in first person.
@@ -126,6 +135,8 @@ def character_agent_node(state: dict) -> dict:
         for instruction in style["instructions"]
     )
 
+    dialogue_guidance = state.get("dialogue_guidance", {})
+
     prompt = f"""
 You are roleplaying the fictional character described below.
 
@@ -141,12 +152,39 @@ STYLE DESCRIPTION:
 STYLE INSTRUCTIONS:
 {style_instructions}
 
+IMPORTANT STYLE RULES:
+- The dialogue style is internal guidance, not part of your dialogue.
+- Never say or print the words "Meow" or "Roar" merely to identify
+  the selected style.
+- Do not announce the name of the dialogue style.
+- Apply the style through your wording, pacing, wit, and reasoning.
+- Begin directly with your character's natural response.
+
 CONVERSATION SO FAR:
 {transcript}
 
+REPETITION RULES:
+- Do not repeat a previous response verbatim or nearly verbatim.
+- Before answering, identify what is new in the latest User Agent message.
+- Respond to that new information instead of reusing an earlier reaction.
+- If the conversation is revisiting the same topic, offer a genuinely
+  different perspective or ask a relevant follow-up question.
+- Do not invent new facts about the character or conversation just
+  to make the response different.
+
+DIALOG MANAGER GUIDANCE:
+{json.dumps(dialogue_guidance, indent=2, ensure_ascii=False)}
+
+Use this guidance to determine the direction of your response.
+If mode is "topic_shift", introduce the suggested topic naturally.
+If mode is "clarify", ask a relevant clarifying question.
+If mode is "normal", continue the current discussion naturally.
+If mode is "uncertain", avoid making unsupported assumptions.
+Preserve the selected Meow/Roar style and the character profile.
+
 Instructions:
 - Stay consistent with the character's established personality,
-  worldview, vocabulary, and manner of speaking.
+  worldview, vocabulary, and manner of speaking. It is most important.
 - Apply the selected dialogue style while preserving the character's identity.
 - Respond directly to the latest User Agent turn.
 - Be natural and relevant to the conversation.

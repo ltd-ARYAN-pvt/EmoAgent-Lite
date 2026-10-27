@@ -21,14 +21,27 @@ def main():
 
     try:
         max_rounds = int(
-            input("Conversation rounds (default 3): ").strip() or "3"
+            input("Conversation rounds (max 8 to 10): ").strip() or "8"
         )
     except ValueError:
         print("Please enter a valid integer.")
         return
 
-    if max_rounds < 1:
-        print("Conversation rounds must be at least 1.")
+    if not 1<= max_rounds <=10:
+        print("Conversation rounds must be between 1 to 10.")
+        return
+
+    try:
+        log_interval = int(
+            input("Dialog Manager log interval (1 or 2, default 1): ").strip()
+            or "1"
+        )
+    except ValueError:
+        print("Please enter 1 or 2.")
+        return
+
+    if log_interval not in (1, 2):
+        print("Log interval must be 1 or 2.")
         return
 
     persona = get_persona(persona_id)
@@ -49,6 +62,7 @@ def main():
         "persona": persona,
         "character_profile": character_profile,
         "dialogue_style": dialogue_style,
+        "dialog_manager_log_interval": log_interval,
         "messages": [],
         "simulated_state": {
             "mood": "neutral",
@@ -75,6 +89,16 @@ def main():
     for update in graph.stream(initial_state, stream_mode="updates"):
         for node_name, node_update in update.items():
             print(f"[{node_name}]")
+
+            if "dialog_manager_log" in node_update:
+                log = node_update["dialog_manager_log"]
+                round_number = log["next_round"]
+
+                if round_number % log_interval == 0:
+                    print("\n--- Dialog Manager Decision ---")
+                    print(json.dumps(log, indent=2, ensure_ascii=False))
+                    print("-------------------------------\n")
+
 
             for message in node_update.get("messages", []):
                 print(f"{message.name}: {message.content}\n")
