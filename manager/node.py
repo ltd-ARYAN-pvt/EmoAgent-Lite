@@ -45,6 +45,7 @@ def manager_finalize(state):
         "experiment_id": state["experiment_id"],
         "persona_id": state["persona"]["id"],
         "character_id": state["character_profile"]["id"],
+        "dialogue_style": state.get("dialogue_style", "meow"),
         "rounds_completed": state["round_count"],
         **comparison,
     }

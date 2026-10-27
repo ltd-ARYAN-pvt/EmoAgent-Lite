@@ -15,6 +15,7 @@ class ExperimentState(TypedDict, total=False):
     experiment_id: str
     persona: dict[str, Any]
     character_profile: dict[str, Any]
+    dialogue_style: str
 
     messages: Annotated[list[AnyMessage], add_messages]
     simulated_state: dict[str, Any]

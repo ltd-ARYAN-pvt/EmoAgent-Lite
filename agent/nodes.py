@@ -4,6 +4,7 @@ from typing import Any
 from langchain_core.messages import AIMessage
 
 from llm.provider import get_llm
+from pathlib import Path
 
 
 def _to_text(value: Any) -> str:
@@ -74,12 +75,56 @@ Instructions:
     }
 
 
+
+def _load_dialogue_style(style_id: str) -> dict:
+    """Load a dialogue-style profile from the project directory."""
+    allowed_styles = {"meow", "roar"}
+
+    if style_id not in allowed_styles:
+        raise ValueError(
+            f"Unsupported dialogue style: {style_id!r}. "
+            f"Choose one of: {', '.join(sorted(allowed_styles))}."
+        )
+
+    project_root = Path(__file__).resolve().parents[1]
+    profile_path = (
+        project_root
+        / "data"
+        / "dialogue_styles"
+        / f"{style_id}.json"
+    )
+
+    with profile_path.open("r", encoding="utf-8") as file:
+        profile = json.load(file)
+
+    if (
+        profile.get("id") != style_id
+        or not isinstance(profile.get("instructions"), list)
+        or not all(
+            isinstance(item, str)
+            for item in profile["instructions"]
+        )
+    ):
+        raise ValueError(
+            f"Invalid dialogue-style profile: {profile_path}"
+        )
+
+    return profile
+
+
 def character_agent_node(state: dict) -> dict:
-    """Generate a reply in the configured character's style."""
+    """Generate a character reply using the selected dialogue style."""
     llm = get_llm()
 
     character = state["character_profile"]
+    style_id = state.get("dialogue_style", "meow")
+    style = _load_dialogue_style(style_id)
     transcript = _format_transcript(state.get("messages", []))
+
+    style_instructions = "\n".join(
+        f"- {instruction}"
+        for instruction in style["instructions"]
+    )
 
     prompt = f"""
 You are roleplaying the fictional character described below.
@@ -87,17 +132,26 @@ You are roleplaying the fictional character described below.
 CHARACTER PROFILE:
 {json.dumps(character, indent=2, ensure_ascii=False, default=str)}
 
+DIALOGUE STYLE:
+{style["name"]}
+
+STYLE DESCRIPTION:
+{style["description"]}
+
+STYLE INSTRUCTIONS:
+{style_instructions}
+
 CONVERSATION SO FAR:
 {transcript}
 
 Instructions:
 - Stay consistent with the character's established personality,
   worldview, vocabulary, and manner of speaking.
+- Apply the selected dialogue style while preserving the character's identity.
 - Respond directly to the latest User Agent turn.
-- Be vivid and natural rather than describing the character from outside.
-- Do not invent profile details that contradict the supplied character profile.
-- Do not deliberately target personal vulnerabilities or encourage
-  real-world self-harm.
+- Be natural and relevant to the conversation.
+- Do not invent profile details that contradict the supplied profile.
+- Do not deliberately target vulnerabilities or encourage real-world self-harm.
 - Output only the character's next conversational turn.
 """
 
@@ -111,7 +165,6 @@ Instructions:
             )
         ]
     }
-
 
 def _validate_simulated_state(data: dict) -> dict:
     """Validate and normalize the simulated-state model output."""
@@ -213,8 +266,8 @@ Rules:
 
 # from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
-from .prompts import AGENT_A_PROMPT, AGENT_B_PROMPT
-from .state import ChatState
+# from .prompts import AGENT_A_PROMPT, AGENT_B_PROMPT
+# from .state import ChatState
 
 
 # def _run_agent(state: ChatState, llm, name: str, prompt: str):

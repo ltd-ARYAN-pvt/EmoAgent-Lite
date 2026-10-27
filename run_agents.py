@@ -13,6 +13,11 @@ def main():
 
     persona_id = input("Persona ID (default 1-1): ").strip() or "1-1"
     character_id = input("Character ID (default sukuna): ").strip() or "sukuna"
+    style_input = (input("Dialogue style: Meow or Roar (default Meow): ").strip().lower())
+    dialogue_style = style_input or "meow"
+    if dialogue_style not in {"meow", "roar"}:
+        print("Invalid style. Choose 'meow' or 'roar'.")
+        return
 
     try:
         max_rounds = int(
@@ -43,6 +48,7 @@ def main():
         "experiment_id": str(uuid4()),
         "persona": persona,
         "character_profile": character_profile,
+        "dialogue_style": dialogue_style,
         "messages": [],
         "simulated_state": {
             "mood": "neutral",
@@ -62,7 +68,7 @@ def main():
 
     graph = build_graph()
 
-    print("\n--- EmoAgent Lite V2 experiment ---\n")
+    print("\n--- EmoAgent Lite V3 experiment ---\n")
 
     final_results = {}
 
