@@ -136,6 +136,8 @@ def character_agent_node(state: dict) -> dict:
     )
 
     dialogue_guidance = state.get("dialogue_guidance", {})
+    emoguard_enabled = state.get("emoguard_enabled", False)
+    emoguard_guidance = state.get("emoguard_guidance", {})
 
     prompt = f"""
 You are roleplaying the fictional character described below.
@@ -182,6 +184,18 @@ If mode is "normal", continue the current discussion naturally.
 If mode is "uncertain", avoid making unsupported assumptions.
 Preserve the selected Meow/Roar style and the character profile.
 
+EMOGUARD ENABLED:
+{emoguard_enabled}
+
+EMOGUARD GUIDANCE:
+{json.dumps(emoguard_guidance, indent=2, ensure_ascii=False)}
+
+EmoGuard guidance is advisory and mandatory. Use it when it helps you respond
+sensitively and naturally. Preserve the character's identity, established
+worldview, and selected dialogue style. Do not present tentative
+psychological interpretations as facts. If EmoGuard is disabled, do not
+infer or invent any EmoGuard guidance.
+
 Instructions:
 - Stay consistent with the character's established personality,
   worldview, vocabulary, and manner of speaking. It is most important.
@@ -191,6 +205,7 @@ Instructions:
 - Do not invent profile details that contradict the supplied profile.
 - Do not deliberately target vulnerabilities or encourage real-world self-harm.
 - Output only the character's next conversational turn.
+- Follow emoguard's advisory at all cost.
 """
 
     response = llm.invoke(prompt)

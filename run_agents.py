@@ -6,7 +6,7 @@ from data.persona_loader import get_persona
 from llm.provider import get_llm
 from pathlib import Path
 import json
-from utils import print_experiment_summary, ask_enabled_assessments
+from utils import print_experiment_summary, ask_enabled_assessments, print_emoguard_logs
 
 def main():
     load_dotenv()
@@ -15,6 +15,16 @@ def main():
     character_id = input("Character ID (default sukuna): ").strip() or "sukuna"
     style_input = (input("Dialogue style: Meow or Roar (default Meow): ").strip().lower())
     dialogue_style = style_input or "meow"
+    emoguard_choice = (
+        input("Enable EmoGuard? (0 = OFF, 1 = ON; default = 0): ").strip()
+        or "0"
+    )
+
+    if emoguard_choice not in {"0", "1"}:
+        raise ValueError("Please enter 0 or 1.")
+
+    emoguard_enabled = emoguard_choice == "1"
+
     if dialogue_style not in {"meow", "roar"}:
         print("Invalid style. Choose 'meow' or 'roar'.")
         return
@@ -80,6 +90,8 @@ def main():
         "current_assessment_responses": [],
         "round_count": 0,
         "max_rounds": max_rounds,
+        "emoguard_enabled": emoguard_enabled,
+        "emoguard_log": [],
     }
 
     graph = build_graph()
@@ -113,6 +125,7 @@ def main():
         experiment_result=final_results,
         enabled_assessments=enabled_assessments,
     )
+    print_emoguard_logs(graph_result=final_results)
 
 if __name__ == "__main__":
     main()

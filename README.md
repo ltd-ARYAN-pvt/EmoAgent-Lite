@@ -309,16 +309,6 @@ The experiment runs through these stages:
 
 The terminal can display individual assessment responses, intermediate scores, conversation messages, and the final score comparison, depending on the output code enabled in your runner.
 
-### Run tests
-
-```bash
-python -m pytest
-```
-
-If you have not added tests yet, create them under `tests/` for scoring validation, persona loading, graph routing, and experiment-result handling.
-
----
-
 ## Main modules
 
 | Module | Responsibility |

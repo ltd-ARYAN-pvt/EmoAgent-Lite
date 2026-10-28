@@ -1,2 +1,2 @@
 from .enable_assessment import ask_enabled_assessments
-from .summary import print_experiment_summary
+from .summary import print_experiment_summary, print_emoguard_logs

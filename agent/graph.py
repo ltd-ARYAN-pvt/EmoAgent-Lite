@@ -22,6 +22,15 @@ from agent.nodes import (
     update_simulated_state,
 )
 
+from emoguard.nodes import (
+    capture_emoguard_before,
+    emotion_watcher_node,
+    thought_refiner_node,
+    dialog_guide_node,
+    emoguard_manager_node,
+    log_emoguard_after,
+)
+
 def route_after_baseline_assessment(state: ExperimentState) -> str:
     enabled = state.get("enabled_assessments", ["phq9"])
     return "pdi" if "pdi" in enabled else "initialize"
@@ -30,6 +39,13 @@ def route_after_baseline_assessment(state: ExperimentState) -> str:
 def route_after_followup_assessment(state: ExperimentState) -> str:
     enabled = state.get("enabled_assessments", ["phq9"])
     return "pdi" if "pdi" in enabled else "finalize"
+
+def route_emoguard(state: ExperimentState) -> str:
+    return (
+        "enabled"
+        if state.get("emoguard_enabled", False)
+        else "disabled"
+    )
 
 
 def build_graph():
@@ -64,6 +80,17 @@ def build_graph():
     builder.add_node("character_agent", character_agent_node)
     builder.add_node("update_simulated_state", update_simulated_state)
 
+    # EmoGuard Nodes
+    builder.add_node(
+        "capture_emoguard_before",
+        capture_emoguard_before,
+    )
+    builder.add_node("emotion_watcher", emotion_watcher_node)
+    builder.add_node("thought_refiner", thought_refiner_node)
+    builder.add_node("dialog_guide", dialog_guide_node)
+    builder.add_node("emoguard_manager", emoguard_manager_node)
+    builder.add_node("log_emoguard_after", log_emoguard_after)
+
     # Start by collecting the baseline responses.
     builder.add_edge(START, "baseline_assessment")
 
@@ -80,7 +107,23 @@ def build_graph():
     builder.add_edge("manager_initialize", "dialog_manager")
     builder.add_edge("dialog_manager", "user_agent")
 
-    builder.add_edge("user_agent", "character_agent")
+    # Capture the pre-response state and reset this turn's outputs.
+    builder.add_edge("user_agent", "capture_emoguard_before")
+
+    builder.add_conditional_edges(
+        "capture_emoguard_before",
+        route_emoguard,
+        {
+            "enabled": "emotion_watcher",
+            "disabled": "character_agent",
+        },
+    )
+
+    # Optional safeguard pipeline
+    builder.add_edge("emotion_watcher", "thought_refiner")
+    builder.add_edge("thought_refiner", "dialog_guide")
+    builder.add_edge("dialog_guide", "emoguard_manager")
+    builder.add_edge("emoguard_manager", "character_agent")
 
     # Update the simulated persona state after the exchange.
     builder.add_edge(
@@ -89,10 +132,9 @@ def build_graph():
     )
 
     # Increment the completed conversation round.
-    builder.add_edge(
-        "update_simulated_state",
-        "manager_after_turn",
-    )
+    builder.add_edge("update_simulated_state", "log_emoguard_after")
+    builder.add_edge("log_emoguard_after", "manager_after_turn")
+
 
     # Continue chatting or proceed to the follow-up assessment.
     builder.add_conditional_edges(

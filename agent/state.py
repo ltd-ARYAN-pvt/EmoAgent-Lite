@@ -51,3 +51,10 @@ class ExperimentState(TypedDict, total=False):
     assessment_records: dict[str, dict[str, Any]]
     baseline_item9_flag: bool
     followup_item9_flag: bool
+
+    # EmoGuard configuration and per-turn outputs
+    emoguard_enabled: bool
+    emoguard_state_before: dict[str, Any]
+    emoguard_analysis: dict[str, Any]
+    emoguard_guidance: dict[str, Any]
+    emoguard_log: list[dict[str, Any]]

@@ -1,3 +1,6 @@
+import json
+
+
 def print_experiment_summary(
     experiment_result: dict,
     enabled_assessments: list[str],
@@ -60,3 +63,42 @@ def print_experiment_summary(
             print("\nPDI was enabled, but baseline/follow-up records are missing.")
 
     print("\n========================================")
+
+
+def print_emoguard_logs(graph_result:dict):
+    emoguard_log = graph_result.get("emoguard_log", [])
+
+    print("\n========== EMOGUARD TURN LOG ==========")
+
+    for record in emoguard_log:
+        print(f"\nRound: {record['round']}")
+        print(f"Enabled: {record['emoguard_enabled']}")
+
+        print("\nState BEFORE:")
+        print(json.dumps(
+            record["state_before"],
+            indent=2,
+            ensure_ascii=False,
+        ))
+
+        print("\nState AFTER:")
+        print(json.dumps(
+            record["state_after"],
+            indent=2,
+            ensure_ascii=False,
+        ))
+
+        if record["emoguard_enabled"]:
+            print("\nModule outputs:")
+            print(json.dumps(
+                record["module_outputs"],
+                indent=2,
+                ensure_ascii=False,
+            ))
+
+            print("\nCharacter guidance:")
+            print(json.dumps(
+                record["character_guidance"],
+                indent=2,
+                ensure_ascii=False,
+            ))
