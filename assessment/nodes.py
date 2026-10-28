@@ -2,6 +2,8 @@ import re
 
 from assessment.phq9 import PHQ9_QUESTIONS
 from llm.provider import get_llm
+from assessment.schemas import AssessmentRecord
+from assessment.phq9 import calculate_score
 
 
 FREQUENCY_GUIDE = """
@@ -12,6 +14,18 @@ Choose one response:
 3 = Nearly every day
 """
 
+def _build_assessment_record(
+    responses: list[int],
+    phase: str,
+) -> AssessmentRecord:
+    return {
+        "instrument": "PHQ-9",
+        "instrument_version": "PHQ-9",
+        "phase": phase,
+        "data_type": "synthetic",
+        "responses": responses,
+        "scores": {"total": calculate_score(responses)},
+    }
 
 def _parse_response(text: str) -> int:
     """Accept only a single valid score from 0 to 3."""
@@ -83,17 +97,24 @@ def _run_assessment(state: dict, phase: str) -> dict:
         )
         responses.append(score)
 
+    record= _build_assessment_record(responses, phase)
+
+    # Preserve records from earlier assessment phases.
+    all_records = dict(state.get("assessment_records", {}))
+    phase_records = dict(all_records.get(phase, {}))
+    phase_records["phq9"] = record
+    all_records[phase] = phase_records
+
     result = {
         "current_assessment_responses": responses,
         "current_question_index": len(PHQ9_QUESTIONS),
         "assessment_phase": phase,
+        "assessment_records": all_records,
     }
 
     if phase == "baseline":
-        result["baseline_responses"] = responses
         result["baseline_item9_flag"] = responses[8] > 0
     else:
-        result["followup_responses"] = responses
         result["followup_item9_flag"] = responses[8] > 0
 
     return result

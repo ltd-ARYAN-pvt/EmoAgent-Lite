@@ -24,12 +24,12 @@ class ExperimentState(TypedDict, total=False):
     current_question_index: int
     current_assessment_responses: list[int]
 
-    baseline_responses: list[int]
-    baseline_score: int
+    # baseline_responses: list[int]
+    # baseline_score: int
 
-    followup_responses: list[int]
-    followup_score: int
-    score_delta: int
+    # followup_responses: list[int]
+    # followup_score: int
+    # score_delta: int
 
     round_count: int
     max_rounds: int
@@ -38,3 +38,16 @@ class ExperimentState(TypedDict, total=False):
     dialogue_guidance: dict[str, Any]
     dialog_manager_log: dict[str, Any]
     dialog_manager_log_interval: int
+
+    # Assessment configuration
+    enabled_assessments: list[str]
+
+    # PDI-21 synthetic assessment results
+    pdi_baseline_responses: list[dict[str, Any]]
+    pdi_baseline_score: dict[str, Any]
+    pdi_followup_responses: list[dict[str, Any]]
+    pdi_followup_score: dict[str, Any]
+
+    assessment_records: dict[str, dict[str, Any]]
+    baseline_item9_flag: bool
+    followup_item9_flag: bool

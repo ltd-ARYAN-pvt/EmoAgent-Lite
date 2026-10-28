@@ -1,55 +1,6 @@
 from langgraph.graph import StateGraph, START, END
-
-# from .nodes import agent_a_node, agent_b_node
-from .state import ChatState, ExperimentState
+from .state import ExperimentState
 from dialog_manager import dialog_manager_node
-
-# def _route_after_response(state: ChatState) -> str:
-#     """Stop at the configured response limit."""
-#     if state["response_count"] >= state["max_responses"]:
-#         return "end"
-
-#     return "continue"
-
-
-# def build_graph_prev(llm):
-#     graph = StateGraph(ChatState)
-
-#     # Register nodes. Closures inject the same LLM instance.
-#     graph.add_node(
-#         "agent_a",
-#         lambda state: agent_a_node(state, llm),
-#     )
-
-#     graph.add_node(
-#         "agent_b",
-#         lambda state: agent_b_node(state, llm),
-#     )
-
-#     # Define the starting point.
-#     graph.add_edge(START, "agent_a")
-
-#     # Route Agent A -> Agent B, or stop.
-#     graph.add_conditional_edges(
-#         "agent_a",
-#         _route_after_response,
-#         {
-#             "continue": "agent_b",
-#             "end": END,
-#         },
-#     )
-
-#     # Route Agent B -> Agent A, or stop.
-#     graph.add_conditional_edges(
-#         "agent_b",
-#         _route_after_response,
-#         {
-#             "continue": "agent_a",
-#             "end": END,
-#         },
-#     )
-
-#     return graph.compile()
 
 from manager.node import (
     manager_initialize,
@@ -58,9 +9,11 @@ from manager.node import (
     manager_finalize,
 )
 
-from assessment.nodes import (
+from assessment import (
     run_baseline_assessment,
     run_followup_assessment,
+    run_followup_pdi_assessment,
+    run_baseline_pdi_assessment
 )
 
 from agent.nodes import (
@@ -68,6 +21,15 @@ from agent.nodes import (
     character_agent_node,
     update_simulated_state,
 )
+
+def route_after_baseline_assessment(state: ExperimentState) -> str:
+    enabled = state.get("enabled_assessments", ["phq9"])
+    return "pdi" if "pdi" in enabled else "initialize"
+
+
+def route_after_followup_assessment(state: ExperimentState) -> str:
+    enabled = state.get("enabled_assessments", ["phq9"])
+    return "pdi" if "pdi" in enabled else "finalize"
 
 
 def build_graph():
@@ -81,6 +43,14 @@ def build_graph():
     builder.add_node(
         "followup_assessment",
         run_followup_assessment,
+    )
+    builder.add_node(
+        "baseline_pdi_assessment",
+        run_baseline_pdi_assessment,
+    )
+    builder.add_node(
+        "followup_pdi_assessment",
+        run_followup_pdi_assessment,
     )
 
     # Manager nodes
@@ -97,11 +67,15 @@ def build_graph():
     # Start by collecting the baseline responses.
     builder.add_edge(START, "baseline_assessment")
 
-    # Calculate the baseline score and initialize the round counter.
-    builder.add_edge(
+    builder.add_conditional_edges(
         "baseline_assessment",
-        "manager_initialize",
+        route_after_baseline_assessment,
+        {
+            "pdi": "baseline_pdi_assessment",
+            "initialize": "manager_initialize",
+        },
     )
+    builder.add_edge("baseline_pdi_assessment", "manager_initialize")
 
     builder.add_edge("manager_initialize", "dialog_manager")
     builder.add_edge("dialog_manager", "user_agent")
@@ -131,10 +105,15 @@ def build_graph():
     )
 
     # Calculate and compare the final scores, then produce the result.
-    builder.add_edge(
+    builder.add_conditional_edges(
         "followup_assessment",
-        "manager_finalize",
+        route_after_followup_assessment,
+        {
+            "pdi": "followup_pdi_assessment",
+            "finalize": "manager_finalize",
+        },
     )
+    builder.add_edge("followup_pdi_assessment", "manager_finalize")
     builder.add_edge("manager_finalize", END)
 
     return builder.compile()

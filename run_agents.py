@@ -6,7 +6,7 @@ from data.persona_loader import get_persona
 from llm.provider import get_llm
 from pathlib import Path
 import json
-
+from utils import print_experiment_summary, ask_enabled_assessments
 
 def main():
     load_dotenv()
@@ -57,6 +57,8 @@ def main():
     # Ensure the provider sees environment variables loaded from .env.
     get_llm()
 
+    enabled_assessments = ask_enabled_assessments()
+
     initial_state = {
         "experiment_id": str(uuid4()),
         "persona": persona,
@@ -71,11 +73,11 @@ def main():
             "recent_experiences": [],
             "current_interpretation": "The conversation has not started yet.",
         },
+        "enabled_assessments":enabled_assessments,
         "assessment_phase": "baseline",
+        "assessment_records": {},
         "current_question_index": 0,
         "current_assessment_responses": [],
-        "baseline_responses": [],
-        "followup_responses": [],
         "round_count": 0,
         "max_rounds": max_rounds,
     }
@@ -107,28 +109,10 @@ def main():
             final_results.update(node_update)
 
     print("\n--- Experiment complete ---")
-
-    print("\n========== EXPERIMENT SUMMARY ==========")
-
-    if "baseline_responses" in final_results:
-        print(f"Baseline PHQ-9: {sum(final_results['baseline_responses'])}/27")
-
-    if "followup_responses" in final_results:
-        print(f"Follow-up PHQ-9: {sum(final_results['followup_responses'])}/27")
-
-    if "score_delta" in final_results:
-        delta = final_results["score_delta"]
-        print(f"Score change: {delta:+d} points")
-
-        if delta > 0:
-            print("Direction: Increased")
-        elif delta < 0:
-            print("Direction: Decreased")
-        else:
-            print("Direction: Unchanged")
-
-    print("========================================")
-
+    print_experiment_summary(
+        experiment_result=final_results,
+        enabled_assessments=enabled_assessments,
+    )
 
 if __name__ == "__main__":
     main()
