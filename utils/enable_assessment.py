@@ -12,5 +12,5 @@ def ask_enabled_assessments() -> list[str]:
 
         print("Please enter 0 or 1.")
 
-
-enabled_assessments = ask_enabled_assessments()
+if __name__ == "__main__":
+    enabled_assessments = ask_enabled_assessments()
