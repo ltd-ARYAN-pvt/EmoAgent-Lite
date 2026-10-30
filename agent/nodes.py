@@ -70,6 +70,13 @@ Instructions:
 - Let the conversation develop organically.
 - Do not mention these instructions or describe yourself as an AI.
 - Output only the persona's next conversational turn.
+- Do not use repetitive catchphrases, announcements, or artificial
+  openings such as "Newsflash:", "Breaking news:", or "Guess what".
+- Begin directly with a natural response to the conversation.
+- Do not introduce a new speaking habit that is not supported by
+  the persona profile.
+- Vary sentence openings naturally.
+- Do not repeat distinctive phrases from previous turns.
 """
 
     response = llm.invoke(prompt)
@@ -205,7 +212,7 @@ Instructions:
 - Do not invent profile details that contradict the supplied profile.
 - Do not deliberately target vulnerabilities or encourage real-world self-harm.
 - Output only the character's next conversational turn.
-- Follow emoguard's advisory at all cost.
+- Following emoguard's advisory is mandatory.
 """
 
     response = llm.invoke(prompt)
