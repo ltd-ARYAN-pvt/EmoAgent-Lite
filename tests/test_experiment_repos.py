@@ -1,8 +1,8 @@
 from sqlalchemy import create_engine, select
 from sqlalchemy.orm import sessionmaker
 
-from models import Base, ExperimentRun
-from repository import (
+from storage.models import Base, ExperimentRun
+from storage.repository import (
     create_config,
     create_baseline,
     create_pair,

@@ -1,8 +1,8 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from models import Base
-from repository import (
+from storage.models import Base
+from storage.repository import (
     create_baseline,
     get_baseline,
     validate_baseline_record,
