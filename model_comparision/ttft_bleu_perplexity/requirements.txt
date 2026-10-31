@@ -1,0 +1,9 @@
+requests
+pandas
+numpy
+sacrebleu
+matplotlib
+torch
+transformers
+accelerate
+sentencepiece

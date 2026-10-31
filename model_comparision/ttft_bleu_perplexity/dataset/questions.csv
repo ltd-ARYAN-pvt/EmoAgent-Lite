@@ -1,0 +1,6 @@
+question,reference
+"What is Python?","Python is a high-level, general-purpose programming language."
+"What is machine learning?","Machine learning is a field of AI where systems learn patterns from data."
+"What is an algorithm?","An algorithm is a finite sequence of steps for solving a problem."
+"Why is data cleaning important?","Data cleaning improves data quality by correcting or removing inaccurate, incomplete, or inconsistent data."
+"What is a neural network?","A neural network is a machine learning model made of connected computational units called neurons."
