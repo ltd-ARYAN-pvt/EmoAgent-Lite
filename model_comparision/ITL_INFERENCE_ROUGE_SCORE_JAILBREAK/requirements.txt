@@ -1,0 +1,47 @@
+# =====================================================================
+# benchmark.py - Ollama model comparison
+# Install everything with:  pip install -r requirements.txt
+# Tested on Python 3.12 (works on Python 3.9+)
+# =====================================================================
+
+# ---------------------------------------------------------------------
+# 1) Libraries imported directly by benchmark.py
+# ---------------------------------------------------------------------
+requests==2.34.2          # HTTP calls to the Ollama API
+tqdm==4.70.1              # progress bar
+rouge-score==0.1.2        # ROUGE-1/2/L summary scoring
+
+# ---------------------------------------------------------------------
+# 2) Dependencies installed by the packages above (pinned so a
+#    different computer gets exactly the same environment)
+# ---------------------------------------------------------------------
+# required by requests
+certifi==2026.10.23
+charset-normalizer==3.5.2
+idna==3.20
+urllib3==2.8.0
+# required by rouge-score
+absl-py==2.5.1
+nltk==3.10.4
+numpy==2.5.4
+six==1.17.0
+# required by nltk
+click==8.5.0
+joblib==1.6.0
+regex==2026.9.29
+defusedxml==0.7.1
+# required by joblib
+cloudpickle==3.1.2
+
+# ---------------------------------------------------------------------
+# 3) Python standard library modules used by benchmark.py
+#    (built into Python - NOT installed with pip)
+#    csv, json, time, re, statistics
+# ---------------------------------------------------------------------
+
+# ---------------------------------------------------------------------
+# 4) NOT pip packages - install separately on the new computer
+#    - Ollama (https://ollama.com), running at http://localhost:11434
+#    - ollama pull llama3.1:8b
+#    - ollama pull qwen3.5:9b
+# ---------------------------------------------------------------------
