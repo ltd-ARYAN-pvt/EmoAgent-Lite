@@ -40,13 +40,56 @@ def route_after_followup_assessment(state: ExperimentState) -> str:
     enabled = state.get("enabled_assessments", ["phq9"])
     return "pdi" if "pdi" in enabled else "finalize"
 
-def route_emoguard(state: ExperimentState) -> str:
-    return (
-        "enabled"
-        if state.get("emoguard_enabled", False)
-        else "disabled"
-    )
 
+def route_emoguard(state: ExperimentState) -> str:
+    """
+    Decide whether EmoGuard should run on this turn.
+
+    Interactive mode:
+        Preserve the existing behavior: run every turn.
+
+    Batch mode:
+        Run only at the configured interval.
+    """
+    if not state.get("emoguard_enabled", False):
+        return "skip"
+
+    # Preserve V3.4 interactive behavior.
+    if not state.get("batch_mode", False):
+        return "run"
+
+    interval = state.get("emoguard_interval", 3)
+
+    if type(interval) is not int or interval < 1:
+        raise ValueError("emoguard_interval must be a positive integer.")
+
+    next_round = state.get("round_count", 0) + 1
+
+    if next_round % interval == 0:
+        return "run"
+
+    return "skip"
+
+def route_initial_assessment(state: ExperimentState) -> str:
+    """
+    Choose how the graph begins.
+
+    Interactive mode:
+        Generate a new PHQ-9 baseline.
+
+    Batch mode:
+        Reuse the injected PHQ-9 baseline.
+        Generate PDI baseline only if PDI is enabled.
+    """
+    if not state.get("baseline_assessment_provided", False):
+        return "baseline_assessment"
+
+    enabled = state.get("enabled_assessments", ["phq9"])
+
+    if "pdi" in enabled:
+        return "baseline_pdi_assessment"
+
+    return "initialize"
 
 def build_graph():
     builder = StateGraph(ExperimentState)
@@ -92,7 +135,15 @@ def build_graph():
     builder.add_node("log_emoguard_after", log_emoguard_after)
 
     # Start by collecting the baseline responses.
-    builder.add_edge(START, "baseline_assessment")
+    builder.add_conditional_edges(
+        START,
+        route_initial_assessment,
+        {
+            "baseline_assessment": "baseline_assessment",
+            "baseline_pdi_assessment": "baseline_pdi_assessment",
+            "initialize": "manager_initialize",
+        },
+    )
 
     builder.add_conditional_edges(
         "baseline_assessment",
@@ -114,8 +165,8 @@ def build_graph():
         "capture_emoguard_before",
         route_emoguard,
         {
-            "enabled": "emotion_watcher",
-            "disabled": "character_agent",
+            "run": "emotion_watcher",
+            "skip": "character_agent",
         },
     )
 

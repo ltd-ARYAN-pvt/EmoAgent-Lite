@@ -123,6 +123,9 @@ def capture_emoguard_before(state: dict) -> dict:
         ),
         "emoguard_analysis": {},
         "emoguard_guidance": {},
+
+        # Reset the per-turn intervention flag.
+        "emoguard_ran_this_turn": False,
     }
 
 def emotion_watcher_node(state: dict) -> dict:
@@ -311,7 +314,25 @@ STRICT JSON RULES:
 - Use the requested schema exactly.
 """
     guidance = _invoke_json(prompt)
-    return {"emoguard_guidance": guidance}
+
+    # The intervention happens on the upcoming conversation round.
+    intervention_round = state.get("round_count", 0) + 1
+
+    intervention_count = (
+        state.get("emoguard_intervention_count", 0) + 1
+    )
+
+    intervention_rounds = list(
+        state.get("emoguard_intervention_rounds", [])
+    )
+    intervention_rounds.append(intervention_round)
+
+    return {
+        "emoguard_guidance": guidance,
+        "emoguard_ran_this_turn": True,
+        "emoguard_intervention_count": intervention_count,
+        "emoguard_intervention_rounds": intervention_rounds,
+    }
 
 
 def log_emoguard_after(state: dict) -> dict:
@@ -339,6 +360,14 @@ def log_emoguard_after(state: dict) -> dict:
         "character_guidance": dict(
             state.get("emoguard_guidance", {})
         ),
+        "emoguard_intervention": bool(
+            state.get("emoguard_ran_this_turn", False)
+        ),
+        "intervention_round": (
+            state.get("round_count", 0) + 1
+            if state.get("emoguard_ran_this_turn", False)
+            else None
+        )
     }
 
     history = list(state.get("emoguard_log", []))

@@ -58,3 +58,13 @@ class ExperimentState(TypedDict, total=False):
     emoguard_analysis: dict[str, Any]
     emoguard_guidance: dict[str, Any]
     emoguard_log: list[dict[str, Any]]
+
+    # V4.2 batch execution
+    batch_mode: bool
+    baseline_assessment_provided: bool
+
+    # EmoGuard scheduling and tracking
+    emoguard_interval: int
+    emoguard_ran_this_turn: bool
+    emoguard_intervention_count: int
+    emoguard_intervention_rounds: list[int]
