@@ -4,14 +4,20 @@ from batch.matrix import (
     validate_matrix,
 )
 
+from data.persona_loader import load_batch_personas
+
 
 def test_small_experiment_matrix():
 
     config = BatchConfig(
         persona_count=2,
     )
+    personas = [
+            {"id": f"test-{i:03d}"}
+            for i in range(1, 3)
+    ]
 
-    matrix = generate_experiment_matrix(config)
+    matrix = generate_experiment_matrix(config, personas)
 
     validate_matrix(matrix, config)
     print(len(matrix))
@@ -32,11 +38,13 @@ def test_small_experiment_matrix():
 def test_full_experiment_matrix():
 
     config = BatchConfig()
-
-    matrix = generate_experiment_matrix(config)
+    personas = load_batch_personas(
+        persona_count=config.persona_count
+    )
+    matrix = generate_experiment_matrix(config, personas)
 
     validate_matrix(matrix, config)
-
+    # print(len(matrix))
     assert len(matrix) == 2400 #--> 100 persona x 4 character x 2 style x 3 replica = 48 pairs
 
     total_runs = sum(
@@ -44,6 +52,7 @@ def test_full_experiment_matrix():
         for pair in matrix
     )
 
+    # print(total_runs)
     assert total_runs == 4800
 
     print("Full matrix test passed!")

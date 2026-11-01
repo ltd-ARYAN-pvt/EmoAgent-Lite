@@ -3,7 +3,7 @@ from pathlib import Path
 from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker
 
-from models import Base
+from storage.models import Base
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent

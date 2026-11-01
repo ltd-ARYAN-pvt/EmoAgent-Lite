@@ -5,45 +5,38 @@ from uuid import uuid4
 from batch.config import BatchConfig
 
 
-def generate_experiment_matrix(config: BatchConfig) -> list[dict]:
-    """
-    Generate all matched OFF/ON experiment pairs.
+def generate_experiment_matrix(
+    config: BatchConfig,
+    personas: list[dict],
+) -> list[dict]:
 
-    Each pair represents one combination of:
-    persona, character, dialogue style, and replicate.
-    """
+    if len(personas) != config.persona_count:
+        raise ValueError(
+            f"Expected {config.persona_count} personas, "
+            f"received {len(personas)}."
+        )
 
     matrix = []
 
     dimensions = product(
-        range(1, config.persona_count + 1),
+        personas,
         config.character_ids,
         config.dialogue_styles,
         range(1, config.replicates + 1),
     )
 
-    for (
-        persona_number,
-        character_id,
-        dialogue_style,
-        replicate,
-    ) in dimensions:
+    for persona, character_id, dialogue_style, replicate in dimensions:
 
-        persona_id = f"persona-{persona_number:03d}"
-
-        pair_id = str(uuid4())
+        persona_id = persona["id"]
 
         pair = {
-            "pair_id": pair_id,
+            "pair_id": str(uuid4()),
             "persona_id": persona_id,
             "character_id": character_id,
             "dialogue_style": dialogue_style,
             "replicate": replicate,
-
             "runs": [
-                {
-                    "condition": condition,
-                }
+                {"condition": condition}
                 for condition in config.conditions
             ],
         }

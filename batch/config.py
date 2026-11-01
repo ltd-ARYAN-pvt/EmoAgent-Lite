@@ -1,5 +1,5 @@
 '''This file defines the benchmark settings and validates them before execution.'''
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, field
 from typing import Any
 
 
@@ -45,8 +45,8 @@ class BatchConfig:
     max_concurrent_runs: int = 1
 
     # Model configuration
-    model_name: str = "llama3.1"
-    model_parameters: dict[str, Any] | None = None
+    model_name: str = "llama3.1:8b"
+    model_parameters: dict[str, Any] = field(default_factory=dict)
 
     def __post_init__(self):
         if self.persona_count < 1:

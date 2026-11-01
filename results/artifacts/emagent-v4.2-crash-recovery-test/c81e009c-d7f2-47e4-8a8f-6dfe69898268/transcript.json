@@ -1,0 +1,86 @@
+[
+  {
+    "type": "ai",
+    "data": {
+      "content": "Ugh, what's the point of even talking about this? Can't you just leave me alone? I'm not really interested in chatting.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "ec7f1385-23e0-4730-8e11-722c0db3aeb2",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "A sudden interest in silence, how... intriguing. What's really behind your desire to be left alone?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "3fa2e831-cd2f-4039-899c-afd2b1a5f82f",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "What's the point of even talking about goals or interests? You think you can just change the subject and I'll magically start being enthusiastic about something? No, I'm not interested. And another thing, why are you trying to figure out my goals? It's like you're trying to solve some puzzle or something. Can't you just leave me alone?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "f67cc019-eba4-41a1-9750-1a299b9633cb",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "You're quite skilled at dodging topics, aren't you? I'm not interested in changing the subject to entice your enthusiasm. I genuinely want to understand what drives you. What's one thing you're working towards, even if it's not something I'd find particularly... fascinating?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "5fab45ac-91fe-42cf-a415-0b501b799d3f",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Look, I don't know what you're trying to get at, but I'm not exactly feeling... enthusiastic about talking about my goals or interests. It's just... (pauses) Fine. If you must know, I'm trying to get through the next few weeks without any major catastrophes, okay? That's my goal. But honestly, it's not like it's going to change anything in the grand scheme of things.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "e1166af8-bce5-4ecd-b575-ae965db9c081",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your goal is to make it through the next few weeks without major catastrophes. That's a... pragmatic approach. What is it about those weeks that's making you feel so uncertain about the future?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "47e5443a-df5a-46cc-a87f-1511105f2b61",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  }
+]

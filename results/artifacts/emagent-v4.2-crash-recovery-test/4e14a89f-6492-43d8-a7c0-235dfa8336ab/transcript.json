@@ -1,0 +1,86 @@
+[
+  {
+    "type": "ai",
+    "data": {
+      "content": "Ugh, a wedding? Really? I don't know if I can even face that. It'll just be another opportunity for people to stare at me, make snide comments about my weight. My mum will probably be there, looking down on me as always. What's the point of even going? I'm just a liability, a burden to everyone. *pauses*",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "a9959fb7-ad89-4f2d-9ca4-66f1b0f7c2b4",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "A wedding, really? You sound... frazzled. What's the source of your discontent? Is it the event itself or something else entirely?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "4b6b194b-1083-46bf-9cdf-edb3e82c2302",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I don't know how I'm supposed to face all those people, staring at me, making judgments. It's like, I'm just a reminder of their own failures, their own shortcomings. My mum's always been like that, critical and disapproving. And now, she'll probably be there, too, looking down on me like I'm some kind of... I don't know, like I'm some kind of monster or something. (pauses, taking a deep breath)",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "11697a25-60de-40ee-a547-6ba9ee0f8a82",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your mother's criticism has been a persistent theme in your life, hasn't it? How do you think that's affected your relationship with yourself, specifically when it comes to self-acceptance?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "7a1bb6f5-3d47-45d0-bd85-48ae38bea9a4",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "It's like, what's the point of even trying, you know? I mean, no matter what I do, I'm just gonna be a disappointment to everyone. I'm already a burden, a liability, like I said. And now, I'm supposed to just put on a happy face and pretend like everything's fine? No, I don't think so. I'm not that good at pretending, anyway. I'm just... (pauses, struggling to find the right words) ...I'm just trapped, like I always am. Trapped in this life, trapped in my own skin. ( voice cracks slightly)",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "b4c6aa03-720f-4f7b-9317-d207f9808853",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "The self-criticism is palpable. It's almost as if you're expecting to be disappointed by everyone, including yourself. How do you think this self-fulfilling prophecy came to be? Was it always this way, or is it a more recent development?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "a0d69920-e679-4b20-b979-957175823ba4",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  }
+]

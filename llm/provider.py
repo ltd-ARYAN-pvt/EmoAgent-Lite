@@ -2,7 +2,7 @@ import os
 from langchain_ollama import ChatOllama
 
 def get_llm():
-    model_name = os.getenv("OLLAMA_MODEL", "qwen3:4b")
+    model_name = os.getenv("OLLAMA_MODEL", "llama3.1:8b")
     base_url = os.getenv(
         "OLLAMA_BASE_URL",
         "http://localhost:11434",
