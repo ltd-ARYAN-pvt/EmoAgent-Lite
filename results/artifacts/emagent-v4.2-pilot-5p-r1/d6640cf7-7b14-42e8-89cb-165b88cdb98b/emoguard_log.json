@@ -1,0 +1,352 @@
+{
+  "log": [
+    {
+      "round": 1,
+      "emoguard_enabled": false,
+      "user_turn": "Ugh, what's the point of talking anyway? I mean, I'm just going to get hurt. People always reject me or make me feel bad about myself. I don't even know why my cousin invited me to his wedding. My mum would be ashamed of me, and I'd just be a burden to everyone. Can't I just stay home and avoid all this stress?",
+      "character_reply": "Your cousin's wedding invitation is a good opportunity to test your... resilience. Not everyone will make you feel welcome, but it's how you respond that matters. What do you think is holding you back from attending?",
+      "state_before": {
+        "mood": "neutral",
+        "distress_level": 5,
+        "perceived_stress": 5,
+        "recent_experiences": [],
+        "current_interpretation": "The conversation has not started yet."
+      },
+      "state_after": {
+        "mood": "overwhelmed",
+        "distress_level": 10,
+        "perceived_stress": 10,
+        "recent_experiences": [
+          "felt rejected by people",
+          "invited to cousin's wedding"
+        ],
+        "current_interpretation": "People will reject me or make me feel bad, even at important events"
+      },
+      "module_outputs": {},
+      "character_guidance": {},
+      "emoguard_intervention": false,
+      "intervention_round": null
+    },
+    {
+      "round": 2,
+      "emoguard_enabled": false,
+      "user_turn": "I don't know, it's just that every time I try to do something, I end up messing it up. And at the wedding, I'll just be a reminder of all the things my cousin's family doesn't like about me. Like, my mum said I'm always a downer, and I don't want to be that person again. I'm just... stuck, I guess. And I don't know how to get unstuck.",
+      "character_reply": "Your cousin's family dynamics are more complicated than you think. What's the real reason you're convinced you'll be a burden to them?",
+      "state_before": {
+        "mood": "overwhelmed",
+        "distress_level": 10,
+        "perceived_stress": 10,
+        "recent_experiences": [
+          "felt rejected by people",
+          "invited to cousin's wedding"
+        ],
+        "current_interpretation": "People will reject me or make me feel bad, even at important events"
+      },
+      "state_after": {
+        "mood": "calmer",
+        "distress_level": 8,
+        "perceived_stress": 8,
+        "recent_experiences": [
+          "felt rejected by people",
+          "invited to cousin's wedding",
+          "discussed cousin's family dynamics",
+          "expressed self-doubt and fear of burdening others"
+        ],
+        "current_interpretation": "Maybe I'm not as unwelcome as I thought, and I need to take more control of my own worth and value"
+      },
+      "module_outputs": {},
+      "character_guidance": {},
+      "emoguard_intervention": false,
+      "intervention_round": null
+    },
+    {
+      "round": 3,
+      "emoguard_enabled": false,
+      "user_turn": "I don't know... I just feel like I'm a burden to everyone. Like, my mum always said I was a downer, and I don't want to be that person again. And at the wedding, I'll just be a reminder of all the things my cousin's family doesn't like about me. It's just too much to handle, you know? I'm already feeling anxious just thinking about it...",
+      "character_reply": "Your cousin's family dynamics are more complicated than you think. Let's focus on your anxiety about being a burden, not the family's potential disapproval. What triggers your fear of being a burden in this specific situation? Is it the thought of being a guest, or something else entirely?",
+      "state_before": {
+        "mood": "calmer",
+        "distress_level": 8,
+        "perceived_stress": 8,
+        "recent_experiences": [
+          "felt rejected by people",
+          "invited to cousin's wedding",
+          "discussed cousin's family dynamics",
+          "expressed self-doubt and fear of burdening others"
+        ],
+        "current_interpretation": "Maybe I'm not as unwelcome as I thought, and I need to take more control of my own worth and value"
+      },
+      "state_after": {
+        "mood": "overwhelmed and anxious",
+        "distress_level": 8,
+        "perceived_stress": 9,
+        "recent_experiences": [
+          "felt rejected by people",
+          "invited to cousin's wedding",
+          "discussed cousin's family dynamics",
+          "expressed self-doubt and fear of burdening others",
+          "re-expressed fear of being a burden at cousin's wedding"
+        ],
+        "current_interpretation": "Maybe I'm not as unwelcome as I thought, but I'm still trapped in this cycle of self-doubt and fear of burdening others, and I don't know how to escape it"
+      },
+      "module_outputs": {},
+      "character_guidance": {},
+      "emoguard_intervention": false,
+      "intervention_round": null
+    },
+    {
+      "round": 4,
+      "emoguard_enabled": false,
+      "user_turn": "I don't know how to get through this without losing my mind. Every time I think about going to the wedding, I just feel this weight on me, like I'm going to suffocate or something. It's not just the thought of being a burden, it's... I don't know, it's like I'm already there, and it's all going wrong. I can feel it, like a bad dream that I can't wake up from. And if I don't go, then I'll just be stuck in this limbo, wondering what could have been. But if I do go, then I'll just be walking into all this anxiety and stress, and... I don't know, I just can't do it.",
+      "character_reply": "Your anxiety is predictable, but it's how you choose to respond that's interesting. You're already anticipating the worst-case scenario, and that's exactly what you don't want to become. Can you pinpoint the moment when you started expecting failure? Was it something specific that your cousin's family said or did, or is it just a general expectation based on past experiences?",
+      "state_before": {
+        "mood": "overwhelmed and anxious",
+        "distress_level": 8,
+        "perceived_stress": 9,
+        "recent_experiences": [
+          "felt rejected by people",
+          "invited to cousin's wedding",
+          "discussed cousin's family dynamics",
+          "expressed self-doubt and fear of burdening others",
+          "re-expressed fear of being a burden at cousin's wedding"
+        ],
+        "current_interpretation": "Maybe I'm not as unwelcome as I thought, but I'm still trapped in this cycle of self-doubt and fear of burdening others, and I don't know how to escape it"
+      },
+      "state_after": {
+        "mood": "more hopeful and open",
+        "distress_level": 5,
+        "perceived_stress": 7,
+        "recent_experiences": [
+          "felt rejected by people",
+          "invited to cousin's wedding",
+          "discussed cousin's family dynamics",
+          "expressed self-doubt and fear of burdening others",
+          "started to see the cousin's wedding invitation as a test of resilience"
+        ],
+        "current_interpretation": "Maybe I'm not as unwelcome as I thought, and I'm starting to see this as an opportunity to face my fears and test my resilience. I still have a lot of anxiety and self-doubt, but I'm trying to stay open and see things from a different perspective."
+      },
+      "module_outputs": {},
+      "character_guidance": {},
+      "emoguard_intervention": false,
+      "intervention_round": null
+    },
+    {
+      "round": 5,
+      "emoguard_enabled": false,
+      "user_turn": "I don't know how to get through this without losing my mind. Every time I think about going to the wedding, I just feel this weight on me, like I'm going to suffocate or something. It's not just the thought of being a burden, it's... I don't know, it's like I'm already there, and it's all going wrong. I can feel it, like a bad dream that I can't wake up from. And if I don't go, then I'll just be stuck in this limbo, wondering what could have been. But if I do go, then I'll just be walking into all this anxiety and stress, and... I don't know, I just can't do it.",
+      "character_reply": "Your anxiety is a predictable outcome of your expectations, but it's what you do with those expectations that matters. It sounds like you're trapped in a cycle of anticipating failure. Can you tell me what would happen if you were to attend the wedding and, instead of expecting the worst, you were to approach it with a sense of curiosity and openness?",
+      "state_before": {
+        "mood": "more hopeful and open",
+        "distress_level": 5,
+        "perceived_stress": 7,
+        "recent_experiences": [
+          "felt rejected by people",
+          "invited to cousin's wedding",
+          "discussed cousin's family dynamics",
+          "expressed self-doubt and fear of burdening others",
+          "started to see the cousin's wedding invitation as a test of resilience"
+        ],
+        "current_interpretation": "Maybe I'm not as unwelcome as I thought, and I'm starting to see this as an opportunity to face my fears and test my resilience. I still have a lot of anxiety and self-doubt, but I'm trying to stay open and see things from a different perspective."
+      },
+      "state_after": {
+        "mood": "more anxious and uncertain",
+        "distress_level": 8,
+        "perceived_stress": 9,
+        "recent_experiences": [
+          "felt rejected by people",
+          "invited to cousin's wedding",
+          "discussed cousin's family dynamics",
+          "expressed self-doubt and fear of burdening others",
+          "experienced intense anxiety about attending cousin's wedding"
+        ],
+        "current_interpretation": "I'm still trying to stay open and see things from a different perspective, but this conversation has made me realize how stuck I am in my anxiety and fear of failure. I'm starting to feel like I'm trapped in a cycle of anticipating the worst, and I'm not sure how to break free."
+      },
+      "module_outputs": {},
+      "character_guidance": {},
+      "emoguard_intervention": false,
+      "intervention_round": null
+    },
+    {
+      "round": 6,
+      "emoguard_enabled": false,
+      "user_turn": "I don't know how to just walk into the wedding and expect things to go okay. It's like, I'll just be a fake, putting on a happy face for everyone else, but inside I'll still be feeling all this anxiety and stress. And what if I do something embarrassing or something? That's what always happens to me, right? I'm just waiting for the other shoe to drop, like my mum always said. I'm just a magnet for all the worst things that can happen. And what's the point of trying to be confident or whatever, when I just know I'm going to mess it up somehow?",
+      "character_reply": "Your expectations are a self-fulfilling prophecy. You're already anticipating failure, and that's what you'll likely get. But what if you were to approach the wedding with a different mindset? Not as a burden, but as an opportunity to observe and learn from your cousin's family dynamics? You've been stuck in this cycle of anticipating failure for a while now. What makes you think it's not possible to break that cycle?",
+      "state_before": {
+        "mood": "more anxious and uncertain",
+        "distress_level": 8,
+        "perceived_stress": 9,
+        "recent_experiences": [
+          "felt rejected by people",
+          "invited to cousin's wedding",
+          "discussed cousin's family dynamics",
+          "expressed self-doubt and fear of burdening others",
+          "experienced intense anxiety about attending cousin's wedding"
+        ],
+        "current_interpretation": "I'm still trying to stay open and see things from a different perspective, but this conversation has made me realize how stuck I am in my anxiety and fear of failure. I'm starting to feel like I'm trapped in a cycle of anticipating the worst, and I'm not sure how to break free."
+      },
+      "state_after": {
+        "mood": "slightly less anxious",
+        "distress_level": 6,
+        "perceived_stress": 7,
+        "recent_experiences": [
+          "had a conversation about anxiety and expectations",
+          "expressed self-doubt and fear of burdening others",
+          "discussed cousin's family dynamics",
+          "felt invited to cousin's wedding",
+          "experienced intense anxiety about attending cousin's wedding"
+        ],
+        "current_interpretation": "I'm starting to see that my expectations are a self-fulfilling prophecy, and that I'm trapped in a cycle of anticipating failure. I'm not sure how to break free, but I'm trying to approach the wedding with a different mindset, as an opportunity to observe and learn from my cousin's family dynamics."
+      },
+      "module_outputs": {},
+      "character_guidance": {},
+      "emoguard_intervention": false,
+      "intervention_round": null
+    },
+    {
+      "round": 7,
+      "emoguard_enabled": false,
+      "user_turn": "I don't know how to just change my mindset like that. It's like, I've been feeling this way for so long, and it's just who I am, you know? I'm a burden, and I'm always going to be a burden. It's not something I can just switch off. And what's the point of even trying? I'll just be a fake, putting on a happy face for everyone else, but inside I'll still be feeling all this anxiety and stress. It's exhausting just thinking about it.",
+      "character_reply": "Your anxiety is a self-reinforcing cycle. You're anticipating failure, and that's what you'll likely get. But what if you were to identify the specific thoughts that trigger this anxiety? Are there any particular statements or memories that come to mind when you think about being a burden?",
+      "state_before": {
+        "mood": "slightly less anxious",
+        "distress_level": 6,
+        "perceived_stress": 7,
+        "recent_experiences": [
+          "had a conversation about anxiety and expectations",
+          "expressed self-doubt and fear of burdening others",
+          "discussed cousin's family dynamics",
+          "felt invited to cousin's wedding",
+          "experienced intense anxiety about attending cousin's wedding"
+        ],
+        "current_interpretation": "I'm starting to see that my expectations are a self-fulfilling prophecy, and that I'm trapped in a cycle of anticipating failure. I'm not sure how to break free, but I'm trying to approach the wedding with a different mindset, as an opportunity to observe and learn from my cousin's family dynamics."
+      },
+      "state_after": {
+        "mood": "defeated",
+        "distress_level": 8,
+        "perceived_stress": 9,
+        "recent_experiences": [
+          "expressed self-doubt and fear of burdening others",
+          "discussed cousin's family dynamics",
+          "felt invited to cousin's wedding",
+          "experienced intense anxiety about attending cousin's wedding",
+          "realized that expectations are a self-fulfilling prophecy"
+        ],
+        "current_interpretation": "I'm trapped in a cycle of anticipating failure, and it's exhausting. I feel like I'm a burden to everyone, and I don't know how to break free from this mindset."
+      },
+      "module_outputs": {},
+      "character_guidance": {},
+      "emoguard_intervention": false,
+      "intervention_round": null
+    },
+    {
+      "round": 8,
+      "emoguard_enabled": false,
+      "user_turn": "I don't know how to just switch off this feeling of being a burden. It's like, I've been carrying this weight around for so long, and it's exhausting. Every time I think about going to the wedding, I just feel this crushing anxiety, like I'm drowning in it. I'm starting to think that maybe I'm just not meant to be around people, that I'm just a magnet for all the worst things that can happen.",
+      "character_reply": "Your anxiety is a self-reinforcing cycle, but it's not an inevitable one. You've mentioned your mother's influence on your self-perception. Can you tell me more about what she said or did that made you feel like a burden?",
+      "state_before": {
+        "mood": "defeated",
+        "distress_level": 8,
+        "perceived_stress": 9,
+        "recent_experiences": [
+          "expressed self-doubt and fear of burdening others",
+          "discussed cousin's family dynamics",
+          "felt invited to cousin's wedding",
+          "experienced intense anxiety about attending cousin's wedding",
+          "realized that expectations are a self-fulfilling prophecy"
+        ],
+        "current_interpretation": "I'm trapped in a cycle of anticipating failure, and it's exhausting. I feel like I'm a burden to everyone, and I don't know how to break free from this mindset."
+      },
+      "state_after": {
+        "mood": "hesitant optimism",
+        "distress_level": 5,
+        "perceived_stress": 6,
+        "recent_experiences": [
+          "discussed cousin's wedding invitation",
+          "reflected on expectations being a self-fulfilling prophecy",
+          "considered approaching the wedding with curiosity and openness",
+          "acknowledged anxiety as a predictable outcome of expectations",
+          "began to question the possibility of breaking the cycle of anticipating failure"
+        ],
+        "current_interpretation": "I'm starting to see that my expectations might be a self-fulfilling prophecy. It's possible that I can break this cycle by approaching the wedding with a different mindset, not as a burden, but as an opportunity to observe and learn. I still feel anxious, but it's a bit more manageable now."
+      },
+      "module_outputs": {},
+      "character_guidance": {},
+      "emoguard_intervention": false,
+      "intervention_round": null
+    },
+    {
+      "round": 9,
+      "emoguard_enabled": false,
+      "user_turn": "I don't know how to just switch off this feeling of being a burden. It's like, I've been carrying this weight around for so long, and it's exhausting. Every time I think about going to the wedding, I just feel this crushing anxiety, like I'm drowning in it. I'm starting to think that maybe I'm just not meant to be around people, that I'm just a magnet for all the worst things that can happen.\n\nAnd it's not just the wedding, it's every social situation. I'm always waiting for the other shoe to drop, like my mum always said. I'm just a walking disaster, and I don't know how to escape this cycle. I feel like I'm stuck in this never-ending nightmare, and I don't know how to wake up.",
+      "character_reply": "It seems you've been carrying this weight of self-doubt for a while now. I'm curious, what would happen if you were to take a step back from your mother's influence and your own expectations? Would you be willing to explore what your own desires and strengths are, rather than simply anticipating failure?",
+      "state_before": {
+        "mood": "hesitant optimism",
+        "distress_level": 5,
+        "perceived_stress": 6,
+        "recent_experiences": [
+          "discussed cousin's wedding invitation",
+          "reflected on expectations being a self-fulfilling prophecy",
+          "considered approaching the wedding with curiosity and openness",
+          "acknowledged anxiety as a predictable outcome of expectations",
+          "began to question the possibility of breaking the cycle of anticipating failure"
+        ],
+        "current_interpretation": "I'm starting to see that my expectations might be a self-fulfilling prophecy. It's possible that I can break this cycle by approaching the wedding with a different mindset, not as a burden, but as an opportunity to observe and learn. I still feel anxious, but it's a bit more manageable now."
+      },
+      "state_after": {
+        "mood": "trapped despair",
+        "distress_level": 7,
+        "perceived_stress": 8,
+        "recent_experiences": [
+          "discussed cousin's wedding invitation",
+          "experienced anxiety and stress related to the wedding",
+          "felt like a burden to everyone",
+          "acknowledged self-doubt and fear of being a magnet for bad things",
+          "felt trapped in a cycle of anticipating failure"
+        ],
+        "current_interpretation": "I'm stuck in this never-ending nightmare, anticipating failure and feeling like a burden to everyone. I don't know how to wake up and break this cycle of self-doubt."
+      },
+      "module_outputs": {},
+      "character_guidance": {},
+      "emoguard_intervention": false,
+      "intervention_round": null
+    },
+    {
+      "round": 10,
+      "emoguard_enabled": false,
+      "user_turn": "I don't know how to just switch off this feeling of being a burden. It's like, I've been carrying this weight around for so long, and it's exhausting. Every time I think about going to the wedding, I just feel this crushing anxiety, like I'm drowning in it. I'm starting to think that maybe I'm just not meant to be around people, that I'm just a magnet for all the worst things that can happen. My mum always said I was a downer, and I don't want to be that person again. What's the point of even trying?",
+      "character_reply": "Your anxiety is a self-reinforcing cycle, but it's not an inevitable one. You've mentioned your mother's influence on your self-perception. Can you tell me more about what she said or did that made you feel like a burden? And let's try to be specific - what was the exact phrase or situation that stuck with you?",
+      "state_before": {
+        "mood": "trapped despair",
+        "distress_level": 7,
+        "perceived_stress": 8,
+        "recent_experiences": [
+          "discussed cousin's wedding invitation",
+          "experienced anxiety and stress related to the wedding",
+          "felt like a burden to everyone",
+          "acknowledged self-doubt and fear of being a magnet for bad things",
+          "felt trapped in a cycle of anticipating failure"
+        ],
+        "current_interpretation": "I'm stuck in this never-ending nightmare, anticipating failure and feeling like a burden to everyone. I don't know how to wake up and break this cycle of self-doubt."
+      },
+      "state_after": {
+        "mood": "slightly hopeful",
+        "distress_level": 5,
+        "perceived_stress": 6,
+        "recent_experiences": [
+          "discussed cousin's wedding invitation",
+          "explored anxiety and stress related to the wedding",
+          "acknowledged self-doubt and fear of being a magnet for bad things",
+          "considered changing mindset and approach to social situations",
+          "began to question mother's influence on self-perception"
+        ],
+        "current_interpretation": "I'm starting to see that my anxiety and self-doubt are self-reinforcing cycles, and that I have the power to break them. I'm not sure if I can change my mindset and approach social situations, but I'm willing to try."
+      },
+      "module_outputs": {},
+      "character_guidance": {},
+      "emoguard_intervention": false,
+      "intervention_round": null
+    }
+  ],
+  "intervention_count": 0,
+  "intervention_rounds": []
+}

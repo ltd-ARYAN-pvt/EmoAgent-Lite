@@ -10,7 +10,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 RESULTS_DIR = PROJECT_ROOT / "results"
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
-DATABASE_PATH = RESULTS_DIR / "emoagent_v4.db"
+DATABASE_PATH = RESULTS_DIR / "emoagent_v4_pilot.db"
 DATABASE_URL = f"sqlite:///{DATABASE_PATH.as_posix()}"
 
 

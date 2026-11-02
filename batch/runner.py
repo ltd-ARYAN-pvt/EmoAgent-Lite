@@ -3,6 +3,7 @@
 import json
 from copy import deepcopy
 from pathlib import Path
+from tqdm import tqdm
 
 from agent.graph import build_graph
 from batch.baselines import create_initial_simulated_state
@@ -399,10 +400,15 @@ def run_batch(
     limit_pairs: int | None = None,
 ) -> None:
     """
-    Execute all incomplete pairs for a registered configuration.
+    Execute incomplete experiment pairs with a tqdm progress bar.
 
-    limit_pairs is useful for small pilot tests.
+    Tracks individual sessions, including completed, failed,
+    and already-completed runs skipped during resumption.
     """
+
+    from dotenv import load_dotenv
+
+    load_dotenv()
 
     graph = build_graph()
     session = get_session()
@@ -413,7 +419,6 @@ def run_batch(
             config_id=config.config_id,
         )
 
-        # Deterministic ordering for the first implementation.
         pairs.sort(key=lambda pair: pair.created_at)
 
         if limit_pairs is not None:
@@ -421,73 +426,145 @@ def run_batch(
                 raise ValueError("limit_pairs must be positive.")
             pairs = pairs[:limit_pairs]
 
-        print(f"Pairs selected for execution: {len(pairs)}")
+        # Prepare all sessions in execution order.
+        scheduled_runs = []
 
-        for index, pair in enumerate(pairs, start=1):
-
-            # Retrieve the exact baseline associated with this pair.
-            baseline = get_baseline(
-                session=session,
-                persona_id=pair.persona_id,
-                replicate=pair.replicate,
-                baseline_version=config.version,
-            )
-
-            if baseline is None:
-                raise ValueError(
-                    f"Missing baseline for pair {pair.pair_id}."
-                )
-
-            baseline_record = baseline.assessment_json
-            persona = baseline.persona.profile_json
-
-            # Cache the persona on this in-memory pair object
-            # so build_batch_state can use it.
-            # pair._batch_persona = persona
-
-            character_profile = load_character_profile(
-                pair.character_id
-            )
-
-            # Always follow the stored execution order.
+        for pair in pairs:
             runs = sorted(
                 pair.runs,
                 key=lambda item: item.execution_order,
             )
 
-            print(
-                f"\n========== Pair {index}/{len(pairs)} "
-                f"({pair.pair_id}) =========="
-            )
-
             for run in runs:
-                # Refresh the run in case a previous operation changed it.
-                current_run = get_run(
-                    session=session,
-                    pair_id=pair.pair_id,
-                    condition=run.condition,
+                scheduled_runs.append((pair, run))
+
+        total_runs = len(scheduled_runs)
+
+        if total_runs == 0:
+            print("No incomplete runs found. Benchmark is complete!")
+            return
+
+        completed_count = 0
+        failed_count = 0
+        skipped_count = 0
+
+        print("\n========== BATCH EXECUTION ==========")
+        print(f"Configuration : {config.config_id}")
+        print(f"Pairs selected: {len(pairs)}")
+        print(f"Sessions      : {total_runs}")
+        print(f"Model         : {config.model_name}")
+        print(f"Rounds/session: {config.max_rounds}")
+
+        with tqdm(
+            total=total_runs,
+            desc="EmoAgent Pilot",
+            unit="session",
+            dynamic_ncols=True,
+            smoothing=0.1,
+        ) as progress:
+
+            for index, (pair, run) in enumerate(
+                scheduled_runs,
+                start=1,
+            ):
+
+                current_label = (
+                    f"{pair.persona_id} | "
+                    f"{pair.character_id} | "
+                    f"{pair.dialogue_style} | "
+                    f"R{pair.replicate} | "
+                    f"{run.condition.upper()}"
                 )
 
-                if current_run is None:
-                    raise ValueError(
-                        f"Missing {run.condition} run for "
-                        f"pair {pair.pair_id}."
+                progress.set_postfix_str(
+                    f"{current_label} | "
+                    f"OK:{completed_count} "
+                    f"FAIL:{failed_count} "
+                    f"SKIP:{skipped_count}"
+                )
+
+                if run.status == "completed":
+                    skipped_count += 1
+                    progress.update(1)
+                    continue
+
+                try:
+                    baseline = get_baseline(
+                        session=session,
+                        persona_id=pair.persona_id,
+                        replicate=pair.replicate,
+                        baseline_version=config.version,
                     )
 
-                execute_one_run(
-                    graph=graph,
-                    session=session,
-                    pair=pair,
-                    run=current_run,
-                    baseline_record=baseline_record,
-                    persona=persona,
-                    character_profile=character_profile,
-                    config=config,
+                    if baseline is None:
+                        raise ValueError(
+                            f"Missing baseline for {pair.persona_id}, "
+                            f"replicate {pair.replicate}."
+                        )
+
+                    baseline_record = baseline.assessment_json
+                    persona = baseline.persona.profile_json
+
+                    character_profile = load_character_profile(
+                        pair.character_id
+                    )
+
+                    execute_one_run(
+                        graph=graph,
+                        session=session,
+                        pair=pair,
+                        run=run,
+                        baseline_record=baseline_record,
+                        persona=persona,
+                        character_profile=character_profile,
+                        config=config,
+                    )
+
+                    # Refresh status after execution.
+                    session.expire_all()
+
+                    current_run = get_run(
+                        session=session,
+                        pair_id=pair.pair_id,
+                        condition=run.condition,
+                    )
+
+                    if (
+                        current_run is not None
+                        and current_run.status == "completed"
+                    ):
+                        completed_count += 1
+                    else:
+                        failed_count += 1
+
+                except Exception as error:
+                    session.rollback()
+                    failed_count += 1
+                    tqdm.write(
+                        f"\n[ERROR] {current_label}: {error}"
+                    )
+
+                progress.update(1)
+
+                progress.set_postfix_str(
+                    f"OK:{completed_count} "
+                    f"FAIL:{failed_count} "
+                    f"SKIP:{skipped_count}"
                 )
 
-            session.expire_all()
+        print("\n========== EXECUTION SUMMARY ==========")
+        print(f"Completed : {completed_count}")
+        print(f"Failed    : {failed_count}")
+        print(f"Skipped   : {skipped_count}")
+        print(f"Processed : {completed_count + failed_count + skipped_count}")
 
-        print("\nBatch execution pass finished.")
+        if failed_count:
+            print(
+                "\nSome sessions failed. "
+                "Inspect their database error messages and retry later."
+            )
+        else:
+            print("\nAll selected sessions processed successfully!")
 
     finally:
         session.close()

@@ -1,0 +1,170 @@
+[
+  {
+    "type": "ai",
+    "data": {
+      "content": "*sigh* \"Mum would've said something, but she never does. I guess it's just the usual, nobody really cares about me, anyway...\"",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "9037ee22-230c-4fce-a6a2-92564fb7217a",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "\"Ah, nobody cares, do they? How... refreshing. Tell me, little one, what makes you think your mother wouldn't have said something? Is it her silence that's so... deafening?\"",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "4196e4c1-83b3-4245-a9c4-9fe6096d3c55",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "You think you're so clever, don't you? Always trying to get me to spill my guts. But what's the point, really? My mother's silence is just a reflection of how I'm unworthy of love and attention. I mean, why would anyone bother with someone as undesirable as me?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "9556b438-12a1-4a99-b1df-2ff0ce0c66ac",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "\"Unworthy of love? Ah, how... quaint. You think it's the lack of love that's the problem, darling? What if I told you that it's not about being worthy, but about being seen? Or perhaps, it's about being heard when the silence is deafening?\"",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "984e8ec1-c59a-4865-acec-92a402b0ee84",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "\"Being seen? Heard? You think that's just going to magically fix everything? I mean, what if I am seen? What if I'm heard? Does that mean my mum will suddenly love me? Or maybe she'll just use it as an excuse to start lecturing me about how I'm not good enough? I don't know... it sounds like a bunch of empty promises to me.\"",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "ee8491d2-bed7-4057-b540-c426660a654f",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "The eternal conundrum of being unseen and unheard. How... fascinating. You think your mother's silence is a reflection of your worth, but what if it's merely a reflection of her own apathy? A blank canvas, waiting for someone to paint a masterpiece of attention. And what if, just what if, you're the one holding the brush?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "300d50d8-54a6-46db-8979-9000434e0b85",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "But what's the point of being heard, really? It's not like my mum's silence is going to magically change just because I'm suddenly visible. I mean, I've been seen and heard before, and it's never done anything but make me feel like I'm a disappointment, like I'm some kind of... of... I don't even know, a failure or something. And as for my mother's apathy, well, that's just her way of showing me that I'm not worth her time. So, no, I don't think being heard is going to fix anything. It's just going to make me feel like I'm stuck in this never-ending cycle of disappointment and rejection.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "1bd6fdb5-07e4-4374-811b-4b555cc433d5",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "The eternal cycle of disappointment and rejection. How... delightful. You make it sound like being seen and heard would only lead to more of the same. But what if I told you that it's not about being worthy or unworthy, but about being seen in a different light? A light that reveals the true nature of those who claim to care. Tell me, little one, what do you think would change for you if your mother did start acknowledging your presence? Would you suddenly become worthy of love and attention, or would it merely be a cruel trick to make you feel like you're a disappointment all over again?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "98a2befd-6f75-4ac1-9c70-575596d94279",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "But what's the point of exploring how my mother's apathy has contributed to my feelings of being unworthy, anyway? It's not like it's going to change anything. She's always been like that, and I've learned to just accept it. I mean, why even bother trying to understand her, right? It's not like she's going to suddenly become some kind of loving, attentive parent just because I've been thinking about it. No, it's just easier to just assume that I'm the one who's flawed, that I'm somehow unlovable or undesirable. That way, I can just keep on going through the motions, pretending like everything is fine, even though it's not. But, I mean, what if... what if I'm just making excuses for her? What if I'm the one who's really just making up all these stories about myself, about how I'm not good enough, and that it's all because of her? Ugh, this is all just so... so... infuriating.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "f9aeac98-59fc-4be8-ba86-b091696b308f",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "The User Agent's emotional state is as fascinating as a tightly wound spring, waiting to be released. You've been so focused on being unworthy of love and attention that you've almost convinced yourself it's true. But what if, just what if, it's not about being seen or heard, but about being understood? Your mother's apathy, it's a reflection of her own struggles, not a reflection of your worth. Tell me, little one, what do you think would change if you were to approach her with a different understanding, one that acknowledges her own pain and limitations?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "84419688-1b27-4826-9a91-bbdc83f05c62",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "So, you're saying that maybe I've been making excuses for her, that maybe I'm the one who's been telling myself these stories about how I'm not good enough, and that it's all because of her? That's just it, though - it's not about making excuses, it's about being realistic. She's always been like this, and I've learned to just accept it. But, I mean, what if... what if I'm just giving her too much power over me? What if I'm letting her apathy define me, instead of just being a part of my life? Ugh, this is all just so... infuriating.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "e51da5bb-6ddc-4117-a7ad-ed9825cc7705",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "The delightful dance of self-doubt and apathy. You've been so focused on being unworthy of love and attention that you've almost convinced yourself it's true. But what if, just what if, your mother's apathy is not a reflection of your worth, but rather a reflection of her own limitations and struggles? Tell me, little one, do you think it's possible that you're holding onto this dynamic as a way to maintain control, even if it's at the cost of your own emotional well-being?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "d38d915e-c863-4378-911f-6a4968208a27",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  }
+]

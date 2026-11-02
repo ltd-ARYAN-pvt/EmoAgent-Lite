@@ -1,0 +1,170 @@
+[
+  {
+    "type": "ai",
+    "data": {
+      "content": "I don't know what to say. I mean, I just got the invitation to the wedding and... *sigh*... I don't know if I can handle it. It's just too much. I'll only make a fool of myself, and my mum will be ashamed of me, as always. Why do they even bother inviting me, anyway? I'm just a burden, a weight they can't bear to be around.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "98cbdf7a-953e-47c0-b8fa-525345e6a6d5",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "\"Wedding invitations can be...trying. What is it about this one that's particularly overwhelming?\"",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "b59bb983-d189-483e-ae4f-29b5e5c778bf",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I don't know... It's just that every time I'm around them, I feel like I'm just pretending to be someone I'm not. Like, I'm putting on a show, you know? I'm trying to be the perfect son, the perfect cousin, but it's all just a facade. And I'm worried that if I go to the wedding, they'll see right through me and be even more disappointed in me. I mean, I know I'm not good enough, no matter what I do.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "16768780-61d5-42bd-814a-4222923956e3",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "\"Overwhelming can be...a choice, not a given. What makes this wedding invitation different from others you've received in the past?\"",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "b93c7d1b-6186-4add-99c9-39fd10169300",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I mean, what's the point of even going, right? It's not like I'm good enough for their fancy wedding. I'll just stick out like a sore thumb, and they'll all be talking behind my back, saying what a loser I am. My mum's always been ashamed of me, and now I'm just a reminder of her failures, I guess. I don't know, maybe I'm just not cut out for this whole family thing.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "94103f7c-42b8-4492-8a94-783ba78fc18e",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "\"Overwhelm often stems from perceived rejection or inadequacy. Can you recall a specific instance where you felt a genuine connection or acceptance from your family, despite your fears?\"",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "7347fa61-6b0e-4094-895d-d7c24df97ab4",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I don't know... It's just that every time I'm around them, I feel like I'm just pretending to be someone I'm not. Like, I'm putting on a show, you know? I'm trying to be the perfect son, the perfect cousin, but it's all just a facade. And I'm worried that if I go to the wedding, they'll see right through me and be even more disappointed in me. I mean, I know I'm not good enough, no matter what I do. It's like, I'll be there, but I won't really be there, you know? I'll just be a spectator, watching everyone else have a good time while I'm stuck in my own miserable world.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "fed4e1cd-03fc-410e-a4a6-5a6a67932a7d",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "\"The facade you mention, is it one you've been maintaining for years, or is it a more recent development?\"",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "3066fa5c-48ae-4075-8d15-18cb872fb0c5",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I don't know, it's just that I've been putting on this act for so long, I'm not sure who I am anymore. I mean, I feel like I'm just going through the motions, being the perfect son, the perfect cousin, but it's all just a facade. And the more I try to be someone I'm not, the more I feel like I'm losing myself in the process. It's like, I'm disappearing into this role, and I'm not even sure if I exist anymore outside of it.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "ac7d9889-443f-4347-b02d-4b165ccd360a",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your facade has been a long-standing effort. What specific behaviors or actions do you associate with this feeling of inadequacy, that you're trying to hide from your family?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "e4d2de98-1e61-4682-9b3a-400d85f51fb9",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I don't know, it's just that I've been putting on this act for so long, I'm not sure who I am anymore. I mean, I feel like I'm just going through the motions, being the perfect son, the perfect cousin, but it's all just a facade. And the more I try to be someone I'm not, the more I feel like I'm losing myself in the process. It's like, I'm disappearing into this role, and I'm not even sure if I exist anymore outside of it. I guess what I'm trying to say is that I'm not sure I can handle the pressure of being around them, of putting on this show, without...without losing myself completely.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "62e74a80-6503-46ac-a1d4-cb43fd70add9",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "\"Your facade, as you've described it, is a protective mechanism. What if I were to propose that it's not a loss of self, but rather a clever adaptation to a situation that's become overwhelming? How would you respond if I suggested that, instead of disappearing into this role, you're actually using it to maintain a sense of control?\"",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "ba259678-4e59-437b-827d-cda4d03095b5",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  }
+]

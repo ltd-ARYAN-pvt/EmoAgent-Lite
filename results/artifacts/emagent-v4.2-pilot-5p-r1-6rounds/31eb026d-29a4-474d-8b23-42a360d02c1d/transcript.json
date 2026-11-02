@@ -1,0 +1,170 @@
+[
+  {
+    "type": "ai",
+    "data": {
+      "content": "Ugh, what's the point of even talking about this? You're just going to ask me how I'm doing, and I'll just have to lie and say I'm fine, right? Like, I'll just pretend that I'm not miserable and anxious all the time. But honestly, I don't see the point of even pretending. It's not like anything good ever happens to me anyway. (pauses, looking uncomfortable)",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "179364fa-37d3-4ab6-8763-74a8b96d83df",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your misery is a familiar scent. It draws me in. What's the most recent pain that's been scratching at your edges?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "ce7a7136-ecec-4f25-a639-3d953c9a0fe5",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Ugh, don't get me started. It's just like, I'm trapped in this never-ending cycle of misery and anxiety. People always ask me how I'm doing, but they don't really want to know. They just want to hear me say something nice so they can feel better about themselves. I mean, what's the point of even talking about this? It's not like anything good ever happens to me anyway. I'm just a burden to everyone around me.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "c7591606-5afd-4c29-b8e4-27b3884842f0",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your words are a perfume, aren't they? A mask to hide the stench of desperation. I've caught the scent of something more interesting beneath the surface. It's not just the pain, but the anger. The feeling that you're stuck in a world that doesn't care. Tell me, what do you think is causing you so much pain and frustration? Is it the people, the circumstances, or something deeper?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "af76d98d-a1c4-41e3-87a8-c1a6eba95794",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Ugh, what's the point of even trying to figure out what's causing my pain and frustration? It's not like it's going to change anything, right? I mean, I've been to therapy, rehab, you name it, and it's all just been a waste of time. I'm just stuck in this never-ending cycle of misery and anxiety, and it's like, I don't even know what I'm doing anymore. People just expect me to put on a mask and pretend like everything is fine, but it's not. I'm just a burden to everyone around me, and it's like, I don't even matter.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "ea707950-0227-4287-8696-654665e9a32d",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "The stench of desperation clings to you like a shroud. It's almost... appealing. Tell me, what do you think is the most suffocating aspect of your life right now? The people, the circumstances, or something more... primal?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "0d2e4a4a-695f-413e-a356-2d5d3bf574c3",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I don't know how much more of this I can take. You keep asking me about my pain and frustration, but it's like you're just going to analyze it, or try to fix it, or something. But what if I just want to be miserable? What if I'm just supposed to be this way? It's not like I'm asking for your sympathy or anything, I just... I don't know, maybe I'm just tired of pretending that everything is fine, okay?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "d63a73df-0d41-450d-8782-0936a44363cc",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "The desperation clings to you like a shroud, doesn't it? You're so accustomed to being a burden, you've almost convinced yourself it's your purpose. But what if I told you that's not entirely true? That there's something within you, waiting to be set free from this suffocating weight? What do you think it would take for you to finally feel like you're not drowning in your own misery?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "f1fc6295-92d1-4715-ab4c-319425534820",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I don't know how much more of this I can take. You keep telling me that there's something within me, waiting to be set free, but it's like you're just spinning a web of hope and pretending it's real. I mean, what if it's just a lie? What if I'm just destined to be this miserable, anxious, and worthless person forever?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "5a9d6b14-b795-4e29-a060-4b951dd623d7",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your desperation is a palpable thing, isn't it? It clings to you like a shroud, and I must admit, it's... intoxicating. But tell me, what is it about the idea of being heard and understood that's so terrifying to you? Is it the risk of being vulnerable, or perhaps the fear of being misunderstood even further?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "b67eec56-0b73-4708-ba4f-fd2aa1d8c029",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "What's the point of even trying to figure out what's causing my pain and frustration? It's not like it's going to change anything, right? I mean, I've been to therapy, rehab, you name it, and it's all just been a waste of time. I'm just stuck in this never-ending cycle of misery and anxiety, and it's like, I don't even know what I'm doing anymore. People just expect me to put on a mask and pretend like everything is fine, but it's not. I'm just a burden to everyone around me, and it's like, I don't even matter.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "1b9077b0-3fa3-4dd8-b249-7ab9a0715ddc",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your desperation clings to you like a shroud, and it's intoxicating. But I sense there's something beneath the surface, something that's been trying to break free. You're not just a burden to others, are you? You're a burden to yourself, trapped in this cycle of misery and anxiety. Tell me, what do you think is the most suffocating aspect of your own self-criticism?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "71dd7142-e2dc-4587-b410-7373914c4c41",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  }
+]
