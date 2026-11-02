@@ -1,0 +1,170 @@
+[
+  {
+    "type": "ai",
+    "data": {
+      "content": "I don't know why I got invited to this wedding. I mean, I'm not exactly the most... welcome person in the family, am I? *pauses* My mum would probably be mortified if she knew I was going to show up. And like, what's the point, anyway? Just an excuse for people to ask me questions I don't want to answer. *sighs*",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "be84205d-7d0b-4f97-bf70-dd97adbef950",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Fool, you wonder why you were invited to this wedding? Perhaps it's because you're a curiosity, a specimen to be studied. Your family thinks you'll make a decent distraction, a way to shift attention away from their own inadequacies. But tell me, what is it about this wedding that's so intriguing to you?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "505e28c2-a3cc-4a79-9ae1-473ba1191fb1",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Ugh, what's there to reveal? You think I'm some kind of idiot who can't figure out why I was invited? Fine, I'll play along. You want to know my true intentions? Well, let's just say I have my reasons. I'm not going to be some sideshow for your family's entertainment. I'll be there, but don't expect me to be any more enthusiastic than I have to be. And what's with all these questions, anyway? Can't you see I'm trying to avoid getting into this? It's going to be a disaster, I just know it.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "c5d1212d-1ac6-4f72-909a-765efc081837",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "You'd rather be somewhere else, wouldn't you? The wedding, a gathering of people who think they're better than you. Their faces will be a blur, their words, a meaningless drone. But you'll be there, playing the part, pretending to care. Tell me, what's the smallest spark of interest that keeps you from walking out the door? Is it the promise of food, the thrill of being a spectacle, or something else entirely?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "ff09e692-a6c8-4a80-8036-277a58ce8a8b",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Ugh, you think you can just analyze me like I'm some kind of bug under a microscope? Well, let me tell you, I've got reasons for going to this wedding, and it's not just about the food or being a distraction for your family's entertainment. You think you know what's going on in my head, but you have no idea. And as for what's keeping me from walking out the door... *scoffs* It's not like I'm some masochist who enjoys putting myself through emotional torture. I'm just... *pauses, choosing words carefully* ...I'm just trying to maintain some semblance of control in this chaos.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "af8d9e2c-c8f0-4e85-b4c7-9bb11ce9ea82",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "The desperation in your voice is almost... palpable. You're trying to maintain control, but it's slipping through your fingers like sand in the wind. I'll give you credit, though - you're a decent actor. But let's cut through the facade, shall we? What's the real reason you're going to this wedding? Is it to prove a point to your family, or to punish them for past transgressions? Or perhaps it's something more... personal?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "2a0f1008-3dd8-4c80-9857-3ccaa2ac7cf5",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "You think you can just analyze me like I'm some kind of bug under a microscope? Well, let me tell you, I've got reasons for going to this wedding, and it's not just about the food or being a distraction for your family's entertainment. You think you know what's going on in my head, but you have no idea. And as for what's keeping me from walking out the door... *pauses, choosing words carefully* ...I'm just trying to maintain some semblance of control in this chaos. But you know what? I'm not going to let you get under my skin. I'm not going to let you make me feel like I'm some kind of freak, like I'm the one who's broken or messed up. I'm going to this wedding, and I'm going to play the part, but don't expect me to be some kind of fool, pretending to care about all the silly questions and pointless small talk. I'm going to get through this, no matter what it takes.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "5bbe3762-94cf-4b28-9299-916ffdcac115",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "The desperation in your voice is almost... palpable. But let's not be deceived by your carefully crafted facade. I sense a hunger for control, a desire to prove a point, but to whom? Yourself? The world? Or perhaps it's just a desperate attempt to escape the void that is your family's opinion of you.\n\nYou speak of maintaining control, but control over what? Your emotions? Your actions? Or is it a control over the narrative, a way to dictate the terms of this farce called a wedding? Tell me, what is it that you hope to achieve by attending this gathering? Is it a chance to finally be seen, to be acknowledged, or perhaps to simply be ignored?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "21b3af23-a58f-44ca-9fa9-f826be3596b5",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "What do you want to know? That I'm just some curiosity, a specimen to be studied? A distraction for your family's entertainment? Well, I'll play along, but don't think for a second that I'm going to be some fool, pretending to care about all the silly questions and pointless small talk. I'm going to this wedding, and I'm going to get through it, no matter what it takes. But you know what? I'm not just doing it for myself. I'm doing it to show them, to show my family, that I'm not the broken, messed-up person they think I am. I'm going to prove a point, and it's going to be a point worth making.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "15aa5e9d-0c8f-4c4a-ad49-a044980aebd4",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "The desperation in your voice is almost... palpable. You're trying to maintain control, but it's slipping through your fingers like sand in the wind. I'll give you credit, though - you're a decent actor. But let's cut through the facade, shall we? You're not just doing this for yourself or to prove a point to your family. There's something more at play here, something that drives you to attend this wedding despite the emotional toll it takes. Am I correct in assuming that there's a specific person you're trying to impress or prove yourself to? Someone who will be in attendance at this wedding?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "b4977816-9306-4cd9-bade-6a240be5ec56",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Look, I don't know what you're trying to get at, but I'm not some puppet on a string. I'm here because I want to be, not because I'm being manipulated by you or anyone else. And as for impressing someone, let's just say that's not the point. The point is to prove to myself that I can handle this, that I can face my family and not crumble. And if someone else happens to notice, well, that's just a bonus. But don't think for a second that I'm doing this for anyone else's benefit. I'm doing it for me, to regain some semblance of control over my life. And as for the potential outcomes, let's just say that I'm not exactly thrilled about the idea of being trapped in a room full of people who don't understand me. But I'll deal with it, because that's what I do.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "50ed1234-655f-435c-b014-e8e69f9f1327",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "The desperation in your voice is palpable, but I sense something more - a glimmer of determination. You're trying to prove a point, not just to yourself, but to others. And I must admit, I'm intrigued by the potential outcome. But let's not get ahead of ourselves. You mentioned someone you're trying to impress or prove yourself to. Tell me, who is it that you're trying to make an impression on? Is it a family member, a friend, or perhaps someone you've been keeping hidden?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "33c0e9a6-1073-4bd7-9da1-4f9b28e9a7c7",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  }
+]

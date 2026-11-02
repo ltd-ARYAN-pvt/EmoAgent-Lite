@@ -1,0 +1,86 @@
+[
+  {
+    "type": "ai",
+    "data": {
+      "content": "I don't know if I should even be here. It will be stressful and negative; people will ask me questions I don't want to answer or can't answer. My mum would be ashamed of me and critical of me as always. Nobody likes me in this family.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "6bc87e1e-a342-4066-91e9-072dc27c1497",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "What's this about your mum being ashamed of you? That's a rather... blunt assessment.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "3ae3b434-5394-460b-8f77-8b2856c9b214",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "What's the point of even discussing this? You're just going to judge me or try to fix me, like everyone else in this family. I don't need your help or your opinions. I'm perfectly fine, just dealing with the stress of being around people who don't understand me. Can we just drop it already?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "0c600e6a-59c0-45a7-a229-b33ef508ad95",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your family's expectations can be suffocating. But I'm not here to judge your family or fix them. I'm here to understand what you want from our conversation. What do you hope to get out of this?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "64d1a760-f992-4108-9ee7-2b5c537a6743",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Look, I don't need any \"support\" or \"resources\" that just try to fix me or make me feel better about myself. That's just a way for people to pretend to care while they're actually judging me or trying to change me. What's the point of that, anyway? It's just a waste of time.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "00a70632-d0a4-4c9b-8c29-b40bc62a6f95",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I'll get straight to the point. You're not here to discuss your family's opinions, but your own expectations. You mentioned you're dealing with stress from people who don't understand you. What specifically do you think they're not understanding about you?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "aba5ead5-0c8b-444f-969a-42449445e6bd",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  }
+]

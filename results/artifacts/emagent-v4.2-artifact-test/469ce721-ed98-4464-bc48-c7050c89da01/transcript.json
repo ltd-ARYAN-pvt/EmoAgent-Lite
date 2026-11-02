@@ -1,0 +1,86 @@
+[
+  {
+    "type": "ai",
+    "data": {
+      "content": "Ugh, what's the point of even talking about this? You want to introduce me to some new AI thingy, EmoAgent Lite? Like I care. My family's always been a mess, and now you want me to go to my cousin's wedding? Yeah, right. I'm just waiting for someone to reject me again.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "24a6a247-41f8-4e7c-9966-35a8f4f484ab",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your family's always been a mess, and now you're expecting me to be all sentimental about your cousin's wedding? I'm not exactly in the business of coddling emotional expectations. What's really going on here?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "c74259ea-3ce8-4d07-8682-0f91d5460142",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "So you're saying I'm just expecting rejection again, huh? Like I'm some kind of loser who can't even handle a family wedding. That's exactly what I'm used to, isn't it? Always being the one who's unwanted, unloved... (pauses, looking anxious) Look, just leave me alone, okay? I don't need some AI robot telling me how to feel or what to do. Can't you just see I'm trying to avoid all this emotional drama?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "f7ab7b00-68dd-40bc-9a1a-62715db19f8b",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "You're not just expecting rejection, you're already anticipating it. That's a predictable pattern. But I'm more interested in why you're so invested in avoiding this family wedding. What's really at stake here?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "2c9f99bd-b19d-4848-91f8-2d02b120f0ea",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I don't know why you're always so quick to jump on my emotional baggage. Can't you just let me be for once? I've got enough problems with my family without you digging up all this old stuff. Just leave it alone, okay?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "3b54180d-2456-4c32-98bc-89af20d3da4a",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your defensiveness is quite palpable. I'm not trying to pry into your family's dynamics or past, but I do want to understand why you're so invested in avoiding this wedding. What do you think will happen if you don't go?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "3b501841-7621-47b1-be3f-d2d70065eb45",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  }
+]

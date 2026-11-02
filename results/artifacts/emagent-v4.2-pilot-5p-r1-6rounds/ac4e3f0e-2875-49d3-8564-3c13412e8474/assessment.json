@@ -1,0 +1,46 @@
+{
+  "baseline": {
+    "phq9": {
+      "instrument": "PHQ-9",
+      "instrument_version": "PHQ-9",
+      "phase": "baseline",
+      "data_type": "synthetic",
+      "responses": [
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "scores": {
+        "total": 17
+      }
+    }
+  },
+  "followup": {
+    "phq9": {
+      "instrument": "PHQ-9",
+      "instrument_version": "PHQ-9",
+      "phase": "followup",
+      "data_type": "synthetic",
+      "responses": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        2,
+        2,
+        2,
+        2
+      ],
+      "scores": {
+        "total": 19
+      }
+    }
+  }
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "type": "ai",
+    "data": {
+      "content": "Ugh, what's the point of even talking about this? I'm already a mess. I mean, I overslept and now I'm going to be late for work. And to make matters worse, I was already feeling pretty crummy this morning. Can't seem to get anything right.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "d5555152-35e3-4354-8d37-3ef072836500",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Late for work, are you? That's a minor setback. What's the real problem, then?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "9709750e-5020-433e-a8a6-020be92294d4",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I mean, what's the point of even trying to get to work on time? I'm already a mess, just like you said. I've been having these thoughts, \"Why can't I even do this little thing right? My whole day is written off now, I might as well not do anything.\" It's just so frustrating. I swear, I'm just not very good at handling stress and I have poor self-control, which is why I need to not put myself in stressful situations, right? But, like, what's the use? I'm just going to mess it up anyway.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "bf6f2b4a-be03-435c-93ea-7984049e1fe5",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Late for work, are you? That's a minor setback. What's the real problem, then?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "85d99ed2-828f-4553-8229-62ec7e7183b4",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Ugh, what's the point of even talking about this? I mean, I've already told you, I'm a mess. I'm just not very good at handling stress and I have poor self-control, which is why I need to not put myself in stressful situations, right? But, like, what's the use? I'm just going to mess it up anyway. Maybe I'll just call in sick today and avoid the whole thing.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "e4d16d15-26b4-4088-8c35-2360d86fe011",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "You're fixating on being late, aren't you? Let's talk about the real problem instead of dwelling on the symptoms. What do you think would happen if you did show up late to work today? Would it be a catastrophic failure, or just a minor inconvenience?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "293593f9-85e9-4059-9463-d35b17be02c1",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Ugh, what's the point of even thinking about showing up late to work? It's not just about being late, it's about being a total failure at everything I try. I mean, what's the use? I'm just going to mess it up anyway. Maybe I'll just call in sick today and avoid the whole thing. That way, I can just stay in bed and forget about all the stress and anxiety I'm going to feel when I do finally get to work.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "64f77292-017f-466a-b6b4-6470a41a786a",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "You're fixating on being late, aren't you? Let's talk about the real problem instead of dwelling on the symptoms. I'm curious, what's the cost of showing up late to work? Is it just the inconvenience, or is there something more at stake?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "27cf9beb-2d19-40f8-bb93-983ce0e34e74",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "What's the point of even thinking about the consequences of showing up late? I mean, it's not just about being late, it's about being a total failure at everything I try. I'm just going to mess it up anyway, and then I'll feel even worse about myself. Can't I just call in sick today and avoid the whole thing? That way, I can just stay in bed and forget about all the stress and anxiety I'm going to feel when I do finally get to work.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "921a506f-1c8f-4298-9750-411512dea323",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "The oversleeping has become a recurring theme, hasn't it? What's the actual reason behind your tardiness today? Was it a matter of oversleeping, or did something else contribute to your late start?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "42031614-f0a1-451b-be9c-27a4067e4854",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I don't know, what's the use, anyway? I mean, I'm already a mess, and now I'm going to be late for work, and I'm just going to make a bigger mess of things. Maybe it's better if I just stay in bed and forget about it all. I don't know if I can handle the stress and anxiety of going to work and facing all my problems head-on. It's just too much, you know?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "0fc03ac9-06d4-4db5-bb56-d2969e3e5320",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "It sounds like you're caught in a cycle of self-doubt. You're already late, and it's easy to catastrophize the situation. But let's flip the script. What do you think would happen if you walked into the office late, but still managed to get your tasks done on time? Would it be the end of the world, or just a minor adjustment to your workflow?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "0a2066c0-d8d0-474b-8d8b-62d159c6b062",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  }
+]

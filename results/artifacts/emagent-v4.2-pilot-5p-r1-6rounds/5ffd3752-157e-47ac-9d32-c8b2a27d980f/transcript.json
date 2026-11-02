@@ -1,0 +1,170 @@
+[
+  {
+    "type": "ai",
+    "data": {
+      "content": "\"Ugh, what's the point of even talking? You're just going to end up asking me a bunch of questions I don't want to answer. Or maybe you'll just sit there judging me, like everyone else always does. I don't know why I even bothered responding to the invitation. I'm just not very good at handling stress and I have poor self-control, which is why I need to not put myself in stressful situations. Like this conversation, for instance.\"",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "76b2865c-de59-49b1-80fb-c8f3dcffcdc1",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "\"I find it interesting that you've already assumed I'd be 'judging' you. That's a rather...predictable reaction, don't you think? As for your self-control, it's certainly a challenge to manage stress effectively. But perhaps we can discuss strategies for coping with pressure, rather than dismissing the conversation altogether? What do you think is the most significant stressor in your life right now?\"",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "37a8a789-9519-4d37-902c-990953c91740",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I don't know why you're trying to analyze me like this. Can't you see I'm just trying to avoid all the stress and negativity that comes with talking about this stuff? It's not like I'm some kind of expert on stress management or anything. I mean, just look at me, I'm already feeling anxious and overwhelmed just thinking about it. And you want me to share some specific situation and my coping strategies? Are you kidding me? That's just asking for more judgment and criticism. Like, why do I even need to talk about this with you? Can't I just...just not be here, you know?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "2856fa26-e4c4-47c2-926c-7d5287dacff7",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your anxiety is palpable. It's clear that discussing this topic is uncomfortable for you. I'm not asking you to share intimate details or offer expertise on stress management. I'm attempting to understand your perspective and perhaps, through a shared understanding, find ways to mitigate the stressors in your life. You mentioned avoiding stressful situations, but it seems like we're already in one. What's the most significant aspect of this conversation that you'd like to change or avoid discussing?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "5fe7a818-a9c5-4108-8548-8305b6a8a509",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "You're still trying to analyze me, I see. Look, I don't know why I even bother sharing this stuff with you. It's just going to end up being some kind of judgment, like my mum always was. You're just going to sit there, nodding and pretending to understand, but really you're just waiting for me to slip up so you can pounce. I've had enough of this conversation already. Can't I just leave now?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "fad9e918-f324-4a1a-a597-7dc251b804cb",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your frustration is palpable, and it's clear that our conversation has already reached a breaking point for you. I'd like to acknowledge that, rather than pushing you further, I'd like to take a step back and ask: what is it about our conversation that's triggering this strong emotional response in you? Is it the feeling of being analyzed or judged, or is there something specific that I've said or done that's causing you distress?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "d9c7c470-b04e-4f0a-a162-21e80b705225",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "You still don't get it, do you? You think you can just nod and pretend to understand, but really you're just waiting for me to let my guard down so you can pounce on my vulnerabilities. I'm not going to fall for that. I've been burned before, and I know how it feels to be manipulated and used. I'm not going to trust you that easily. So, just drop it, okay? Stop trying to analyze me and just let me go.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "6be4de27-f0b0-45f0-ab31-156194fe17b1",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your frustration is understandable, but I'd like to ask: what is it about being burned in the past that makes you so wary of trusting others?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "3303e8e6-8608-4cfe-a958-ed43477b7671",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I've had enough of this conversation already. Can't you just drop it? Stop trying to analyze me and just let me go. What's the point of even talking about this stuff, anyway? You're just going to end up being judgmental and critical, like everyone else. I don't want to talk about my coping strategies or support systems. That's just more stress and negativity I don't need. Look, just leave me alone, okay?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "bbb80080-ac66-4ac4-996b-a0cba11850fa",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your frustration with our conversation is understandable, but I'd like to observe that you've consistently expressed a desire to avoid discussing your coping strategies and support systems. Given the context of our conversation, I'd like to ask: if you were to have a trusted ally or confidant in your life, someone who could offer a supportive and non-judgmental perspective on your stressors and challenges, what would you hope that person would bring to the table in terms of advice or guidance?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "5192f18d-77c3-4d70-bbdf-dcafef2350ba",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Look, I don't know why you're still trying to get me to talk about my coping strategies and support systems. Can't you see that's just more stress and negativity for me? It's like you're just waiting for me to slip up so you can pounce on my vulnerabilities. I'm not going to fall for that. I've been burned before, and I know how it feels to be manipulated and used. Just drop it, okay? Stop trying to analyze me and just let me go. What's the point of even talking about this stuff, anyway?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "d6573c05-8cde-4b3a-b3c8-efb7c9a1fb6d",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I've observed that you've been repeating a pattern of frustration and resistance, which suggests that our conversation has reached an impasse. Before we continue, I'd like to acknowledge that it takes a significant amount of emotional energy to engage in discussions that make you feel vulnerable or judged. Can you tell me more about what would make you feel more comfortable and heard in this conversation?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "fcf60767-4284-45cb-ac35-bc5d7c8f249d",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  }
+]

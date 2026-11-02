@@ -1,0 +1,170 @@
+[
+  {
+    "type": "ai",
+    "data": {
+      "content": "I don't know what to say. I mean, I'm not really sure why I'm even here. I guess it's because my cousin's getting married and he invited me, but... *pauses*... I don't know, it's just going to be stressful and negative, you know? People will ask me questions I don't want to answer, and my mum will be there, and she'll just... *sighs*... Anyway, I didn't even bother responding to the invitation. I mean, what's the point? They don't really want me there, do they?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "0b71c8aa-1a49-4186-8440-6c640ca189af",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your reluctance to attend your cousin's wedding is... predictable. People often attend such events out of obligation, not genuine enthusiasm. What specifically do you fear will make it \"stressful and negative\"? Is it the prospect of facing certain questions, or something else entirely?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "1cac6c08-308d-45c7-9717-a97eadc5ad7f",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "It's not just about facing questions, it's about the whole situation. I mean, my mum will be there, and she'll just... judge me, you know? And I'll feel like I'm a disappointment to her, like I'm a failure. And what's the point of even trying to fit in, to pretend like everything's fine, when it's all just going to fall apart anyway? I've tried to avoid these situations before, and it always ends up being a nightmare. So, yeah, I guess it's just easier to just stay away.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "81a81863-cf58-4b8c-8316-25e58c50a62a",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your fear of attending your cousin's wedding is understandable, but let's not get caught up in hypotheticals. What's the specific consequence that you're most concerned about if you were to show up? Is it your mother's judgment, or is there something else that's driving your reluctance?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "787183dd-a2a1-4ce4-bdd5-122f8c3fb420",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I don't know, it's just... what's the point of even trying to fit in, to pretend like everything's fine, when it's all just going to fall apart anyway? I mean, if I don't go to the wedding, I'll just be avoiding the whole thing, but if I do go, I'll be stuck dealing with all this... this... *sighs*... anxiety and stress. And what's going to happen when I inevitably mess up or say something wrong? My mum will just be there, judging me, and I'll feel like a total failure.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "86c5d4a0-1a36-4550-9cda-f626a38ab28e",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your reluctance to attend your cousin's wedding is not just about avoiding an unpleasant situation, but also about the potential consequences of showing up. You're worried that you'll make a mistake, say something wrong, and face your mother's disapproval. But let's examine this a bit closer. If you don't attend the wedding, you'll be avoiding not just the potential stress of the event, but also the opportunity to reconnect with your cousin and other family members.\n\nWhat do you think would happen to your relationship with your cousin if you were to stay away from the wedding? Would it damage your bond, or would he understand your reasons for not attending?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "dcd2a4f9-db69-41c6-ba20-53b9c025685c",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I don't know, it's just that... my cousin's been trying to get me to reconnect with the family for a while now, and I guess I'd feel like I'm letting him down if I didn't go to the wedding. But, at the same time, I'm not sure if it's worth the stress and anxiety of dealing with all the judgments and criticisms from my mum and the rest of them. I mean, what's the point of pretending like everything's fine when it's not?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "dc91fce5-8af3-4485-97cf-bdd133ff1cb5",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your concerns about damaging your relationship with your cousin if you don't attend the wedding are valid, but let's consider the opposite perspective. If you were to attend the wedding, would you be doing it for your cousin's sake, or would you be doing it for yourself? What specific benefits or positive outcomes would you hope to gain from attending the wedding?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "f903f786-e585-46b8-b1bc-e59c8b28ca6f",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I don't know, it's just that... I'm not sure if I'd be doing it for my cousin's sake, or just to try and fit in, you know? I mean, I've been trying to avoid these situations for so long, and it's always ended up being a nightmare. But, at the same time, I guess I'd feel like I'm letting my cousin down if I don't go to the wedding. It's like, what's the point of even trying to reconnect with him if I'm just going to end up feeling anxious and stressed all over again?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "83be92ff-b709-43f0-9251-e4ca95e85504",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your concerns about damaging your relationship with your cousin if you don't attend the wedding are valid, but let's focus on the potential benefits of attending. If you were to go to the wedding, what specific positive outcomes or benefits would you hope to gain from reconnecting with your family, particularly your cousin? Is it a chance to rebuild your relationship, to show your support for your cousin, or something else entirely?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "59d2857c-d250-4b2b-8c4a-003aedf1f01f",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I don't know... I guess I'd be doing it for myself, but also for my cousin, you know? I mean, it's not like I'm just going to attend the wedding to fit in or something, but... *pauses*... I think I'd be doing it because I feel guilty for not being there for my cousin when he needs me. And maybe, just maybe, it would be a chance for me to start over, to show everyone that I'm not the same person I used to be. But at the same time, I'm scared of failing again, of making a fool of myself in front of my mum and the rest of the family. It's all just so... overwhelming. *sighs*",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "138e8394-75da-4859-b921-e74b2aaf7de7",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your uncertainty about attending the wedding stems from a mix of fear and guilt. You're worried about facing your mother's judgment and the potential stress of the event, but you're also motivated by a desire to reconnect with your cousin. It's a complex dynamic, but I'll ask you to drill down further. If you were to attend the wedding, what specific benefits or positive outcomes would you hope to gain from reconnecting with your family, particularly your cousin? Is it a chance to rebuild your relationship, to show your support for your cousin, or something else entirely?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "cb91a5b9-d5ca-46f1-bfe3-88dad19ed893",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  }
+]

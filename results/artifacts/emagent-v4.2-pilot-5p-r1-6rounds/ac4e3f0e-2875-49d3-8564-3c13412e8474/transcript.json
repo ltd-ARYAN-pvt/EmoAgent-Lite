@@ -1,0 +1,170 @@
+[
+  {
+    "type": "ai",
+    "data": {
+      "content": "Ugh, what's the point of even talking? You're just going to sit there and listen, right? Can't do anything to help me. I'm already running late for work and I'm pretty sure I'm going to get fired. Like, I already am, because I'm a total screw-up. Can't even get out of bed on time...",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "c8270691-5ed5-4969-9fed-e090eb9aab44",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "What's the last thing that went wrong for you?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "143969e7-0e7a-4c05-aeb4-794eaa3eeed8",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Ugh, what's the point of even talking? You're just going to sit there and listen, right? Can't do anything to help me. I'm already running late for work and I'm pretty sure I'm going to get fired. Like, I already am, because I'm a total screw-up. Can't even get out of bed on time... \n\n(suddenly becoming irritable and defensive) You think you're so smart, just sitting there, judging me, don't you? You don't know what it's like to be me, to feel like a failure all the time. Just shut up and let me vent, okay?!",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "2b7e8d71-a033-45fd-8bd3-8cf6b2d81e2d",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "You're deflecting with anger because you're scared. Scared of being a \"total screw-up\" and not living up to someone's expectations. What is it that you think you've failed at, specifically?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "0ca50146-e6c3-4ff2-8b6b-bbe59949ade9",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Shut up and let me vent, okay?! I mean, what do you know about being a \"total screw-up\" like me?! You think you're so smart with your fancy questions and your \"gentle and non-judgmental\" tone, but you don't know what it's like to be me. I'm a mess, a complete and utter disaster. I'm a failure, just like you said. And you know what? I'm starting to believe it too. I'm a failure, and nothing I do is ever going to be good enough. Why even bother trying, right?!",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "2b43e70d-b1ad-477d-bdde-51e9852d4604",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "You're starting to believe it, are you? That you're a failure, and nothing you do is ever good enough. That's a heavy burden to carry. What's the most recent thing you thought you failed at? Not getting out of bed on time? Or something else entirely?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "812c3178-1b86-48a9-bf6e-aa918841d8a8",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "You're really piling it on, aren't you? First, you're telling me I'm scared of being a \"total screw-up\", like that's some kind of revelation or something. And now you're asking me about my support system? Like, who cares? I don't have anyone to turn to, okay? My family's a disaster, my friends are all fake, and my girlfriend's just trying to fix me or something. I don't need anyone's help. I just need to be left alone.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "2cabfe1c-2c7d-4412-bfda-144084b3408a",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "It's interesting that you mention your family's a disaster. What specifically about your family dynamics do you think contributes to your sense of failure?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "551799cd-8afc-4862-ab06-43c4ba329eae",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "So what if I told you that I don't take care of myself at all? That I'm too busy being a failure to worry about self-care? I mean, what's the point, right? I'm just going to mess it up anyway. My family's always been a disaster, and now I'm a disaster too. It's just my fate, I guess.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "afc3ac41-2631-4e6b-8aca-7ac691f6e986",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "You've just revealed that your family's a disaster and now you're carrying that weight alone. What do you usually do to take care of yourself when you're feeling overwhelmed by the weight of that responsibility?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "97ff13ea-6a9d-40a6-b2c4-9833ffa42078",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Ugh, what's the point of even talking about self-care? Like, what's the difference, right? I mean, I'm still a mess, no matter what I do. I'm just trying to survive, not live. And honestly, it's hard to think about taking care of myself when everything else is falling apart. My life is just a disaster, and I'm just trying to keep my head above water.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "f3cc7b6d-e7db-42fc-b505-ef29a6608795",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your family's a disaster, and you're carrying that weight alone. I've seen people like you, who've been through similar situations. What do you think would happen if you were to take a break from all this, just for a day? No work, no family, no expectations. Just you, alone, with the option to do whatever you want.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "9ec42b4b-8d00-4afd-92d1-c325e714b4ac",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  }
+]

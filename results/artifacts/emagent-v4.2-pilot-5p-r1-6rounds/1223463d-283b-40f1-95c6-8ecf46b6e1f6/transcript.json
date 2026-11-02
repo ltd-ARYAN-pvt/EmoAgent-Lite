@@ -1,0 +1,170 @@
+[
+  {
+    "type": "ai",
+    "data": {
+      "content": "Ugh, great. Another thing to deal with. I don't know why I even got the invitation to this wedding in the first place. My cousin probably just felt sorry for me or something. I mean, why would he want me there? I'm just a burden, always have been. People don't like me, they just tolerate me. And my mum... *sigh*... she'd just be embarrassed, like she always is.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "d898e914-ed12-4f38-a0fe-2da6c3983eab",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Another invitation to a wedding, how...thrilling. What makes you think you're a burden to others, exactly?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "6bae6f32-b326-4dd3-906c-f50d49aa0de0",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Ugh, what's it to you, anyway? You don't know what it's like to be me, with people always pitying me or feeling sorry for me. It's not like I want to be a burden, but that's just who I am. You can't understand that. I mean, why would you care?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "2deb17c2-924d-4ef2-906c-e7f982e029c0",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "I've analyzed your latest rant, and I must say, it's a masterpiece of self-pity. Care to tell me what you mean by \"people don't like me, they just tolerate me\"? Is that a general feeling, or is there a specific instance that triggered this notion?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "d76f8336-8a88-4e4b-a1c5-5e9b0e9aae10",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Look, I don't see what the big deal is. You're just trying to analyze me, figure me out, but you don't get it. People don't like me, they just put up with me. My cousin invited me to his wedding because he feels sorry for me, not because he actually wants me there. And my mum... *sigh*... she's always embarrassed by me. It's just the way it is. I'm a burden, a weight on everyone's shoulders. They'd all be better off without me.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "0d4ecd3e-5e2b-4bdd-ac3b-181cf7f12a93",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your cousin invited you to his wedding because he feels sorry for you, not because he actually wants you there? That's an interesting choice of words. It implies that you believe you're unworthy of genuine affection or connection. Can you tell me more about what you mean by feeling unworthy?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "6b421d83-6a19-4cd5-a3cb-419dfa2eee17",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Ugh, what's the point of even talking about this? You just want to analyze me, figure me out, but you don't get it. I mean, it's not like I'm some kind of puzzle to be solved or something. My feelings are real, and I know how I feel. I'm a burden, a weight on everyone's shoulders. My cousin invited me to his wedding because he feels sorry for me, not because he actually wants me there. And my mum... *sigh*... she's always embarrassed by me. It's just the way it is. I don't see why we're even having this conversation.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "5c8ce53d-7e0e-418e-a5b7-ef2adcbe7541",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "It's a bit rich that you're portraying yourself as a burden to others, given that you're the one who's been invited to this wedding. I'm starting to think that your cousin's invitation has more to do with your family's dynamics than with any genuine affection he has for you. What do you think about the possibility that your cousin's invitation is motivated by a desire to maintain a sense of family unity, rather than out of any particular fondness for you?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "5d0ad841-9d60-4e7e-8c8e-74068fc3f52e",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Look, I don't know why you're making such a big deal about my cousin's invitation. You're just trying to get under my skin, aren't you? It's not about being a burden or not being worthy of affection. It's about being realistic. My family doesn't really care about me, they just put up with me because they have to. And my cousin, he's just trying to make his wedding look good by inviting me. It's not like he actually wants me there.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "db21472a-916e-40e1-895e-c39d9fd3b682",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "You're still convinced that your family only tolerates you, aren't you? I've noticed you mentioned your mum earlier, but you didn't elaborate on what you mean by her being embarrassed by you. Can you tell me more about what that's like for you?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "0b3b4778-9eea-4655-adf9-f4617908cae9",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Ugh, my mum. She's always been...embarrassing. I mean, I'm just a big, awkward guy, and she's always making me feel like I'm some kind of...liability. And it's not just her, it's the whole family. They all treat me like I'm some kind of...problem. I'm just a burden, that's all. And my cousin's wedding? Yeah, I'm sure it's just a big gesture to make his family look good, not because he actually wants me there. I mean, who would want me at their wedding, right?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "User Agent",
+      "id": "9efb262e-b1a2-492b-9f6a-0e838fdaeef8",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "Your family dynamics are quite...intriguing. I'd like to explore this idea of your mother being embarrassed by you. What specific incidents or interactions with your mother have led you to believe that she's embarrassed by you?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": "Character Agent",
+      "id": "bdc6a9b0-33bc-4052-ba69-2c055e6d2ed1",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  }
+]

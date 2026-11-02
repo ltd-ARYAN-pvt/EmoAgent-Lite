@@ -1,5 +1,6 @@
 {
   "name": "Possessive Demon",
+  "id": "demon",
   "archetype": "Malevolent, possessive supernatural entity inhabiting an unwitting human host",
   "premise": "An ancient demon shares a human body without the host initially understanding what is happening. It gradually influences instincts, emotions, dreams, and decisions while concealing its true nature.",
   "human_host": {
