@@ -1,317 +1,536 @@
-# EmoAgent Lite 🤖💬
+# EmoAgent-Lite 🤖💬
 
-**Authors:** Aryan Pandey, Anshul Kumar, Madhu Sudhana Reddy
+**Authors:** Aryan Pandey, Anshul Kumar, Y Madhu Reddy
 
-### A modular, multi-agent conversational research prototype built with LangGraph and Ollama
+### A modular, multi-agent conversational research prototype built with LangGraph, Ollama, and SQLAlchemy
 
-**EmoAgent Lite** is an evolving multi-agent system for experimenting with character-driven conversations, synthetic personas, dialogue management, structured assessments, simulated-state tracking, and optional conversational safeguards.
+**EmoAgent-Lite** is an independent, lightweight reproduction inspired by the EmoAgent framework for studying safety in mental-health-related human–AI conversations.
 
-The project uses LangGraph to orchestrate agent workflows and Ollama to run local language models. Its architecture separates conversation generation, experiment management, assessment logic, and safeguard processing into modular components.
+The project combines synthetic user personas, character-driven conversational agents, dialogue management, psychological assessment, and an optional safety pipeline called **EmoGuard-Lite**.
 
-> **Current development focus: V3.4 — EmoGuard integration.** EmoGuard can be enabled or disabled to compare simulated state changes and conversational outputs with and without safeguard guidance.
+Built using LangGraph and locally hosted language models through Ollama, the system supports both interactive conversations and controlled batch experiments. Its experiment infrastructure provides matched ON/OFF comparisons, persistent experiment records, baseline reuse, crash recovery, and structured artifact storage.
+
+> **Current version: V4.3 — Pilot Testing.**  
+> The current development focus is evaluating the batch experiment pipeline using synthetic personas, four character profiles, two dialogue styles, and EmoGuard ON/OFF conditions.
 
 ![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
 ![Orchestration](https://img.shields.io/badge/Orchestration-LangGraph-6A5ACD)
 ![LLM Runtime](https://img.shields.io/badge/Local%20LLM-Ollama-black)
-![Assessments](https://img.shields.io/badge/Assessments-PHQ--9%20%7C%20PDI-orange)
-![Development](https://img.shields.io/badge/Development-V3.4-purple)
+![Database](https://img.shields.io/badge/Database-SQLite%20%7C%20SQLAlchemy-blue)
+![Assessments](https://img.shields.io/badge/Assessment-PHQ--9-orange)
+![Development](https://img.shields.io/badge/Version-V4.3-purple)
+![Status](https://img.shields.io/badge/Status-Pilot%20Testing-yellow)
 
 ---
 
-## Table of contents
+## Table of Contents
 
-- [Project roadmap](#project-roadmap)
-- [Architecture](#architecture)
-- [V3 modules and responsibilities](#v3-modules-and-responsibilities)
-- [Project structure](#project-structure)
+- [Project Overview](#project-overview)
+- [Project Roadmap](#project-roadmap)
+- [V4 Architecture](#v4-architecture)
+- [V4 Modules and Responsibilities](#v4-modules-and-responsibilities)
+- [Batch Experiment Design](#batch-experiment-design)
+- [Project Structure](#project-structure)
 - [Requirements](#requirements)
-- [Setup and installation](#setup-and-installation)
-- [Running the project](#running-the-project)
-- [Assessments and scoring](#assessments-and-scoring)
-- [EmoGuard ON/OFF comparison](#emoguard-onoff-comparison)
-- [Troubleshooting](#troubleshooting)
-- [Safety, privacy, and limitations](#safety-privacy-and-limitations)
-- [Future development](#future-development)
+- [Setup and Installation](#setup-and-installation)
+- [Running the Project](#running-the-project)
+- [Experiment Configuration](#experiment-configuration)
+- [Assessments and Evaluation](#assessments-and-evaluation)
+- [EmoGuard ON/OFF Comparison](#emoguard-onoff-comparison)
+- [Database and Experiment Artifacts](#database-and-experiment-artifacts)
+- [Testing](#testing)
+- [Development History](#development-history)
+- [Safety, Privacy, and Limitations](#safety-privacy-and-limitations)
+- [Future Development](#future-development)
 - [License](#license)
 
 ---
 
-## Project roadmap
+## Project Overview
+
+EmoAgent-Lite is designed to investigate how conversational safety mechanisms can be implemented in a resource-constrained, locally executable multi-agent system.
+
+The framework separates the following responsibilities:
+
+| Component | Responsibility |
+|---|---|
+| User Agent | Simulates a fictional persona using a structured psychological profile. |
+| Character Agent | Generates character-driven conversational responses. |
+| Dialog Manager | Guides topic progression and helps identify repetitive conversations. |
+| Experiment Manager | Controls conversation rounds and experiment lifecycle. |
+| Assessment Module | Generates baseline and follow-up synthetic PHQ-9 assessments. |
+| EmoGuard-Lite | Provides optional emotion, thought-pattern, and dialogue-safety guidance. |
+| Batch Experiment Manager | Generates and executes controlled experiment configurations. |
+| Storage Layer | Persists personas, configurations, experiment pairs, runs, and artifacts. |
+
+### Main objectives
+
+- Reconstruct the core ideas of the original EmoAgent framework independently.
+- Run language models locally without requiring paid LLM APIs.
+- Support multiple synthetic personas, character profiles, and dialogue styles.
+- Compare conversations with and without EmoGuard-Lite.
+- Provide reproducible and persistent batch experiments.
+- Evaluate simulated assessment changes and safety-intervention activity.
+- Support future scaling to larger synthetic-persona benchmarks.
+
+**Important:** EmoAgent-Lite is a research prototype. It is not a clinical diagnosis, treatment, or mental-health decision-support system.
+
+---
+
+## Project Roadmap
 
 ### V1 — Two-Agent Conversation
 
-The initial version implements a simple two-agent conversational workflow.
+The initial version introduced a simple two-agent conversational workflow.
 
-- **Agent A:** optimistic and constructive.
-- **Agent B:** analytical and constructively critical.
-- Shared conversation state and alternating turns.
+- Agent A: optimistic and constructive.
+- Agent B: analytical and constructively critical.
+- Shared conversation state.
+- Alternating agent turns.
 - Configurable response limits.
-- Local language-model integration through Ollama.
-- LangGraph-based execution and state transitions.
+- Local LLM integration through Ollama.
+- LangGraph-based execution.
 
-### V2 — Simulated User, Character, and Experiment Manager
+### V2 — Simulated User and Character-Based Interaction
 
-V2 introduces persona-based conversations and experiment-level assessment.
+V2 introduced synthetic personas and experiment-level assessments.
 
-- **User Agent:** simulates a fictional persona loaded from the project's persona data.
-- **Character Agent:** roleplays a configurable character, such as Sukuna.
-- **Experiment Manager:** initializes experiments, controls conversation rounds, and coordinates finalization.
-- **Simulated-state tracking:** maintains mood, distress level, perceived stress, recent experiences, and current interpretation.
-- **Baseline and follow-up PHQ-9:** generates synthetic assessment responses before and after the conversation.
-- **Score comparison:** calculates baseline and follow-up totals and reports the difference.
+- Synthetic User Agent.
+- Character Agent with configurable profiles.
+- Experiment Manager.
+- Simulated-state tracking.
+- Baseline and follow-up PHQ-9 assessments.
+- Score comparison.
 
-### V3 — Dialogue Management, Assessments, and EmoGuard
+### V3 — Dialogue Management and EmoGuard
 
-V3 develops the prototype into a configurable multi-agent experiment with guided conversations, multiple assessment types, and optional safeguard processing.
+V3 expanded the architecture with conversational guidance and optional safety processing.
 
-#### V3.1 — Dialogue Styles
+**V3.1 — Dialogue Styles**
 
-- Introduces selectable dialogue styles: **Meow** and **Roar**.
-- Loads style instructions from JSON profiles.
-- Keeps dialogue-style instructions separate from the character's identity and personality.
-- Allows the same character to respond using different conversational styles.
+- Introduced Meow and Roar dialogue styles.
+- Separated character identity from dialogue-style instructions.
+- Loaded style configurations from JSON.
 
-#### V3.2 — Dialog Manager
+**V3.2 — Dialog Manager**
 
-- Adds a Dialog Manager before each simulated conversation exchange.
-- Provides semantic topic guidance to encourage relevant dialogue progression.
-- Helps identify repetitive discussion and potential conversational loops.
-- Guides the Character Agent toward natural continuation, clarification, or topic shifts.
+- Semantic topic guidance.
+- Repetitive conversation and loop detection.
+- Context-aware dialogue progression.
 
-#### V3.3 — Unified Assessments
+**V3.3 — Unified Assessments**
 
-- Organizes assessment results into a unified `assessment_records` structure.
-- Supports synthetic PHQ-9 baseline and follow-up assessments.
-- Adds an optional **PDI-21 topic prototype** alongside PHQ-9.
-- Stores responses, scoring summaries, assessment phase, and instrument metadata.
-- Keeps assessment responses separate from the conversational transcript.
-- Supports configurable assessment selection through `enabled_assessments`.
+- Unified `assessment_records` structure.
+- PHQ-9 baseline and follow-up.
+- Optional PDI-21 topic prototype.
+- Assessment metadata and structured scoring.
 
-The PDI component uses topic-based paraphrases rather than the official standardized questionnaire items. It is a non-standardized prototype and must not be interpreted as a validated PDI administration or diagnostic result.
+**V3.4 — EmoGuard Integration**
 
-#### V3.4 — EmoGuard Safeguard Layer
+Introduced the optional safeguard pipeline:
 
-EmoGuard is an optional safeguard pipeline that analyzes the latest simulated-person turn and provides guidance to the Character Agent.
+1. Emotion Watcher.
+2. Thought Refiner.
+3. Dialog Guide.
+4. EmoGuard Manager.
 
-Its four components are:
+EmoGuard can be enabled or disabled to support controlled comparisons.
 
-1. **Emotion Watcher:** identifies possible emotional signals, distress indicators, and potential support needs from the conversation.
-2. **Thought Refiner:** identifies possible assumptions, interpretations, contradictions, or thinking patterns that could be explored collaboratively.
-3. **Dialog Guide:** converts the analyses into practical suggestions for a sensitive, relevant response.
-4. **EmoGuard Manager:** consolidates module outputs into concise guidance for the Character Agent.
+### V4 — Persistent Experiments and Batch Evaluation
 
-Additional capabilities:
+V4 transforms the interactive prototype into an experiment-oriented research framework.
 
-- Switch EmoGuard ON or OFF for an experiment.
-- Preserve the existing Dialog Manager and Experiment Manager.
-- Capture simulated state before and after each character response.
-- Record module outputs and consolidated character guidance when EmoGuard is enabled.
-- Compare the two configurations using the same logging structure.
+**V4.1 — Database Layer**
 
-EmoGuard outputs are generated by an LLM. They are experimental suggestions, not validated emotion measurements, psychological diagnoses, or proof of improved outcomes.
+- SQLite database integration.
+- SQLAlchemy models.
+- Pydantic schemas and validation.
+- Repository-based database operations.
+- Persistent personas, experiment configurations, pairs, runs, and artifacts.
+- Persona profile hashing and validation.
 
-#### Planned evaluation component — EmoEval
+**V4.2.1 — Interactive and Batch Compatibility**
 
-EmoEval is a proposed evaluation layer for measuring characteristics such as relevance, empathy, consistency, and instruction following. Automated evaluation criteria, benchmark datasets, and reporting should be considered planned until implemented and tested in the repository.
+- Updated the interactive implementation to coexist with batch execution.
+- Added support for externally provided baseline assessments.
+- Added batch-related state and configuration handling.
+- Preserved the interactive conversation workflow.
 
-### V4 — Persistence, Evaluation, and Scale
+**V4.2.2 — Batch Infrastructure**
 
-Planned improvements include:
+Introduced the `batch/` package.
 
-- Persistent experiment records and reproducible run configurations.
-- Automated benchmark experiments across larger sets of synthetic personas.
-- Structured logs, error tracking, and experiment tracing.
-- Model comparisons and performance measurements.
-- More robust JSON handling, retries, and failure recovery.
-- Optional API integration and a frontend interface.
+- Experiment configuration.
+- Experiment matrix generation.
+- Matched-pair generation.
+- Baseline management.
+- Experiment registration.
 
-### V5 — Results Showcase
+**V4.2.3 — Batch Execution and Testing**
 
-- Architecture diagrams and example conversations.
-- Comparative EmoGuard ON/OFF results.
-- Benchmark tables and experiment reports.
-- Latency, resource-usage, and reliability measurements.
-- Clear documentation of limitations and evaluation methodology.
+- Batch runner.
+- Persistent run execution.
+- Experiment artifact generation.
+- Recovery of incomplete runs.
+- Batch validation and automated tests.
+- Progress monitoring using `tqdm`.
+
+**V4.3 — Pilot Testing (Current)**
+
+Current development focuses on testing the complete batch pipeline.
+
+- Five synthetic personas for the pilot.
+- Four character profiles: Alex, Demon, Joker, and Sukuna.
+- Two dialogue styles: Meow and Roar.
+- One replicate.
+- Six dialogue rounds per session.
+- Two conditions: EmoGuard OFF and ON.
+- PHQ-9 baseline and follow-up.
+- EmoGuard intervention every three rounds.
+- Sequential execution to accommodate limited GPU resources.
 
 ---
 
-## Architecture
+## V4 Architecture
 
-### V1 — Two-agent conversation graph
+V4 separates experiment registration, batch execution, conversation orchestration, and persistent storage.
 
-V1 alternates between Agent A and Agent B until the response limit is reached.
+### 1. Overall V4 batch architecture
 
 ```mermaid
 flowchart TD
-    S([START]) --> A[Agent A]
-    A --> R1{Response limit reached?}
-    R1 -- No --> B[Agent B]
-    R1 -- Yes --> E([END])
-    B --> R2{Response limit reached?}
-    R2 -- No --> A
-    R2 -- Yes --> E
-    A -.-> L[Ollama LLM]
-    B -.-> L
-    A -.-> ST[(ChatState)]
-    B -.-> ST
+    START([Experiment Configuration])
+
+    START --> CONFIG[BatchConfig]
+    CONFIG --> PERSONAS[Load Synthetic Personas]
+    PERSONAS --> BASELINE[Generate or Reuse Baselines]
+    BASELINE --> MATRIX[Generate Matched Experiment Matrix]
+
+    MATRIX --> REGISTER[Register Configurations and Pairs]
+    REGISTER --> DB[(SQLite Database)]
+
+    REGISTER --> RUNNER[Batch Runner]
+    RUNNER --> PAIR[Retrieve Next Incomplete Pair]
+
+    PAIR --> OFF[Execute EmoGuard OFF]
+    PAIR --> ON[Execute EmoGuard ON]
+
+    OFF --> GRAPH[LangGraph Conversation Workflow]
+    ON --> GRAPH
+
+    GRAPH --> ASSESS[Baseline and Follow-up PHQ-9]
+    GRAPH --> EG{EmoGuard Enabled?}
+
+    EG -->|No| CHARACTER[Character Agent]
+    EG -->|Yes| WATCHER[Emotion Watcher]
+    WATCHER --> REFINER[Thought Refiner]
+    REFINER --> GUIDE[Dialog Guide]
+    GUIDE --> MANAGER[EmoGuard Manager]
+    MANAGER --> CHARACTER
+
+    CHARACTER --> STATE[Update Simulated State]
+    STATE --> ROUND{More Rounds?}
+
+    ROUND -->|Yes| GRAPH
+    ROUND -->|No| FINAL[Finalize Run]
+
+    ASSESS --> FINAL
+
+    FINAL --> ARTIFACTS[Save Transcript and Assessments]
+    FINAL --> DB
+    ARTIFACTS --> DB
+
+    DB --> RESULTS[Experiment Results and Analysis]
+    RESULTS --> END([END])
 ```
 
-### V2 — Simulated interaction and assessment graph
+**Note:** The OFF and ON conditions are matched experimental runs, not parallel executions. The current pilot uses sequential execution (`max_concurrent_runs=1`).
 
-V2 wraps the conversation in an experiment workflow.
+### 2. LangGraph conversation workflow
 
-```mermaid
-flowchart TD
-    S([START]) --> BA[Baseline PHQ-9]
-    BA --> MI[Experiment Manager Initialize]
-    MI --> DM[Dialog Manager]
-    DM --> U[User Agent]
-    U --> C[Character Agent]
-    C --> US[Update Simulated State]
-    US --> MT[Experiment Manager: Count Round]
-    MT --> D{More rounds?}
-    D -- Yes --> DM
-    D -- No --> FA[Follow-up PHQ-9]
-    FA --> MF[Experiment Manager Finalize]
-    MF --> E([END])
-```
-
-When PDI is enabled, the baseline PDI assessment runs after baseline PHQ-9 and before experiment initialization. The follow-up PDI assessment runs after follow-up PHQ-9 and before finalization.
-
-### V3.4 — Conversation graph with optional EmoGuard
+Each batch run uses the same underlying conversational graph as the interactive system, with batch-specific state and assessment handling.
 
 ```mermaid
 flowchart TD
-    S([START]) --> BA[Baseline PHQ-9]
-    BA --> BP{PDI enabled?}
-    BP -- Yes --> PDI1[Baseline PDI Prototype]
-    BP -- No --> MI[Experiment Manager Initialize]
-    PDI1 --> MI
+    START([START])
 
-    MI --> DM[Dialog Manager]
-    DM --> U[User Agent]
-    U --> SNAP[Capture State Before Reply]
-    SNAP --> EG{EmoGuard enabled?}
+    START --> BASELINE{Baseline Already Provided?}
 
-    EG -- No --> C[Character Agent]
-    EG -- Yes --> EW[Emotion Watcher]
+    BASELINE -->|No| PHQ[Generate Baseline PHQ-9]
+    BASELINE -->|Yes| INIT[Experiment Manager Initialize]
+
+    PHQ --> INIT
+
+    INIT --> DM[Dialog Manager]
+    DM --> USER[User Agent]
+
+    USER --> SNAP[Capture State Before Reply]
+    SNAP --> GUARD{EmoGuard Enabled?}
+
+    GUARD -->|No| CHAR[Character Agent]
+
+    GUARD -->|Yes| EW[Emotion Watcher]
     EW --> TR[Thought Refiner]
     TR --> DG[Dialog Guide]
     DG --> EM[EmoGuard Manager]
-    EM --> C
+    EM --> CHAR
 
-    C --> US[Update Simulated State]
-    US --> LOG[Record Before/After State]
-    LOG --> MT[Experiment Manager: Count Round]
-    MT --> MORE{More rounds?}
+    CHAR --> UPDATE[Update Simulated State]
+    UPDATE --> LOG[Record Round and Intervention Data]
+    LOG --> MORE{More Rounds?}
 
-    MORE -- Yes --> DM
-    MORE -- No --> FA[Follow-up PHQ-9]
-    FA --> FP{PDI enabled?}
-    FP -- Yes --> PDI2[Follow-up PDI Prototype]
-    FP -- No --> MF[Experiment Manager Finalize]
-    PDI2 --> MF
-    MF --> E([END])
+    MORE -->|Yes| DM
+    MORE -->|No| FOLLOWUP[Generate Follow-up PHQ-9]
+
+    FOLLOWUP --> FINAL[Experiment Manager Finalize]
+    FINAL --> END([END])
 ```
 
-**Important design distinction:** the Dialog Manager guides conversation direction; EmoGuard provides optional safeguard guidance; and the Experiment Manager controls the experiment lifecycle. These are separate responsibilities.
+When a batch run provides an existing baseline, the graph reuses that assessment rather than generating another one. Interactive runs can generate their own baseline.
+
+### 3. Matched-pair experiment workflow
+
+Each experimental pair contains two runs with the same persona, character, dialogue style, and replicate.
+
+```mermaid
+flowchart TD
+    START([Experiment Pair])
+
+    START --> COMMON[Shared Persona and Configuration]
+    COMMON --> BASELINE[Shared Baseline Assessment]
+
+    BASELINE --> OFF[Run A: EmoGuard OFF]
+    BASELINE --> ON[Run B: EmoGuard ON]
+
+    OFF --> OFFSTATE[Independent Conversation State]
+    ON --> ONSTATE[Independent Conversation State]
+
+    OFFSTATE --> OFFRESULT[OFF Results]
+    ONSTATE --> ONRESULT[ON Results]
+
+    OFFRESULT --> COMPARE[Matched-Pair Comparison]
+    ONRESULT --> COMPARE
+
+    COMPARE --> END([Pair Completed])
+```
+
+The two runs use the same experimental configuration and baseline but maintain independent conversation states.
 
 ---
 
-## V3 modules and responsibilities
-
-The table below summarizes the major modules and the roles they play in the V3 workflow.
+## V4 Modules and Responsibilities
 
 | Module | Responsibility |
 |---|---|
-| `agent/state.py` | Defines `ChatState` and `ExperimentState`, including conversation messages, persona information, simulated state, assessment records, dialogue guidance, and EmoGuard data. |
-| `agent/nodes.py` | Implements the User Agent, Character Agent, dialogue-style loading, transcript formatting, and simulated-state updates. |
-| `agent/graph.py` | Defines the LangGraph workflow, connects assessment and conversation nodes, and routes execution through the optional EmoGuard branch. |
-| `dialog_manager.py` or the corresponding Dialog Manager package | Analyzes dialogue context, guides topic progression, and helps manage repetitive or looping conversation. |
-| `emoguard/nodes.py` | Implements state snapshots, the Emotion Watcher, Thought Refiner, Dialog Guide, EmoGuard Manager, and per-round logging. |
-| `manager/node.py` | Initializes experiments, counts completed rounds, determines when to continue or finish, and builds final experiment results. |
-| `assessment/phq9.py` | Defines PHQ-9 assessment data and response validation, according to the current implementation. |
-| `assessment/pdi.py` | Defines the PDI-21 topic prototype, its metadata, response validation, and scoring logic. |
-| `assessment/pdi_nodes.py` or the corresponding assessment node module | Generates synthetic PDI prototype responses and integrates them into assessment records. |
-| `assessment/` | Organizes baseline and follow-up assessment nodes, response processing, and scoring. Exact filenames depend on the current repository layout. |
-| `data/users.json` | Stores or references synthetic persona profiles, according to the current data format. |
-| `data/character/` | Contains character profiles used by the Character Agent. |
-| `data/dialogue_styles/` | Contains JSON configuration files for Meow and Roar dialogue styles. |
-| `llm/provider.py` | Configures and provides the local Ollama language model used by the agents. |
-| `run_agents.py` | Collects experiment configuration, invokes or streams the graph, and displays conversation and experiment results. |
-| `tests/` | Contains automated tests for graph routing, assessments, validation, and experiment behavior, where implemented. |
+| `agent/state.py` | Defines graph state, persona data, conversation history, simulated state, assessment records, and EmoGuard fields. |
+| `agent/nodes.py` | Implements User Agent, Character Agent, dialogue handling, and simulated-state updates. |
+| `agent/graph.py` | Defines the LangGraph workflow and conditional execution paths. |
+| `batch/config.py` | Defines batch experiment configuration and validation. |
+| `batch/matrix.py` | Generates and validates experiment matrices and matched pairs. |
+| `batch/baselines.py` | Creates or reuses baseline assessment records. |
+| `batch/registration.py` | Registers experiment configurations, pairs, and individual runs in storage. |
+| `batch/runner.py` | Executes batch runs, handles completion and failures, and saves experiment artifacts. |
+| `storage/models.py` | Defines SQLAlchemy database models. |
+| `storage/schemas.py` | Defines Pydantic schemas and validation rules. |
+| `storage/repository.py` | Implements database operations and experiment persistence. |
+| `emoguard/` | Contains the optional safeguard pipeline. |
+| `manager/` | Controls conversation rounds and experiment lifecycle. |
+| `assessment/` | Contains assessment definitions, nodes, and scoring logic. |
+| `llm/provider.py` | Configures the local Ollama language model. |
+| `tests/` | Contains automated tests for batch execution, validation, persistence, and recovery. |
 
-> File locations can change during development. Update this table if modules are moved, renamed, or split into separate files.
+### EmoGuard components
 
-### EmoGuard module responsibilities
-
-| Module | Responsibility |
+| Component | Responsibility |
 |---|---|
-| **Emotion Watcher** | Identifies possible emotional signals, distress, frustration, uncertainty, and support needs using conversational evidence. |
-| **Thought Refiner** | Surfaces possible assumptions, interpretations, contradictions, or thought patterns for gentle exploration without diagnosing the simulated person. |
-| **Dialog Guide** | Suggests an appropriate response strategy, possible questions, acknowledgments, and pitfalls to avoid. |
-| **EmoGuard Manager** | Consolidates module outputs into concise guidance that respects the character profile and selected dialogue style. |
-| **State Snapshot and Logger** | Records the simulated state before and after a response, the module outputs, the character's reply, and whether EmoGuard was enabled. |
-| **Character Agent** | Generates the actual character response, using EmoGuard guidance when available while preserving the selected personality and style. |
-| **Experiment Manager** | Controls experiment rounds and assessment transitions independently of the EmoGuard Manager. |
+| Emotion Watcher | Identifies possible emotional signals and distress indicators. |
+| Thought Refiner | Identifies possible assumptions and thought patterns for exploration. |
+| Dialog Guide | Suggests a sensitive and contextually relevant response strategy. |
+| EmoGuard Manager | Consolidates analysis into guidance for the Character Agent. |
+
+The modules provide LLM-generated experimental guidance, not validated psychological measurements or diagnoses.
 
 ---
 
-## Project structure
+## Batch Experiment Design
 
-The following is an illustrative structure based on the current architecture. Keep filenames consistent with the files actually present in your repository.
+V4 supports controlled experiments across multiple dimensions.
+
+### Experimental dimensions
+
+| Dimension | Pilot configuration |
+|---|---:|
+| Synthetic personas | 5 |
+| Character profiles | 4 |
+| Dialogue styles | 2 |
+| Replicates | 1 |
+| Conditions | 2 |
+| Dialogue rounds per session | 6 |
+| EmoGuard interval | Every 3 rounds |
+| Assessment | PHQ-9 |
+| Execution | Sequential |
+
+### Character profiles
+
+- `alex`
+- `demon`
+- `joker`
+- `sukuna`
+
+### Dialogue styles
+
+- `meow`
+- `roar`
+
+### Experimental conditions
+
+- **OFF:** EmoGuard disabled.
+- **ON:** EmoGuard enabled.
+
+### Pilot experiment size
+
+The planned pilot configuration produces:
+
+| Quantity | Expected count |
+|---|---:|
+| Matched pairs | 40 |
+| OFF sessions | 40 |
+| ON sessions | 40 |
+| Total sessions | 80 |
+| Dialogue rounds | 480 |
+| ON intervention events | 80 |
+| Baseline assessments | 5 |
+
+With six rounds and an intervention interval of three, the expected EmoGuard intervention rounds are `[3, 6]` for each ON session.
+
+These are configuration-derived counts, not reported experimental results.
+
+### Planned larger benchmark
+
+A larger benchmark is planned when sufficient computational resources are available.
+
+| Dimension | Planned configuration |
+|---|---:|
+| Personas | 100 |
+| Characters | 4 |
+| Dialogue styles | 2 |
+| Replicates | 3 |
+| Conditions | 2 |
+| Rounds per session | 6 |
+| Matched pairs | 2,400 |
+| Total sessions | 4,800 |
+| Total dialogue rounds | 28,800 |
+| Expected ON interventions | 4,800 |
+| Baseline assessments | 300 |
+
+The larger benchmark is planned future work and should not be interpreted as completed experimentation.
+
+---
+
+## Project Structure
+
+The following structure represents the V4 architecture. Some files may be added or renamed as development continues.
 
 ```text
 EmoAgent-Lite/
+│
 ├── agent/
 │   ├── __init__.py
 │   ├── state.py
 │   ├── nodes.py
 │   └── graph.py
+│
 ├── assessment/
 │   ├── __init__.py
 │   ├── phq9.py
 │   ├── pdi.py
-│   ├── pdi_nodes.py
 │   └── ...
+│
+├── batch/
+│   ├── __init__.py
+│   ├── config.py
+│   ├── matrix.py
+│   ├── baselines.py
+│   ├── registration.py
+│   └── runner.py
+│
 ├── data/
 │   ├── users.json
-│   ├── character/
-│   │   └── sukuna.json
-│   └── dialogue_styles/
-│       ├── meow.json
-│       └── roar.json
-├── dialog_manager.py
+│   ├── all_users.json
+│   └── characters/
+│       ├── alex.json
+│       ├── demon.json
+│       ├── joker.json
+│       └── sukuna.json
+│
 ├── emoguard/
 │   ├── __init__.py
-│   └── nodes.py
+│   └── ...
+│
 ├── llm/
 │   └── provider.py
+│
 ├── manager/
 │   └── node.py
+│
+├── storage/
+│   ├── __init__.py
+│   ├── models.py
+│   ├── schemas.py
+│   └── repository.py
+│
 ├── tests/
-├── run_agents.py
-├── requirements.txt
+│   ├── ...
+│   └── run_pilot.py
+│
+├── results/
+│   ├── artifacts/
+│   │   └── <config_id>/
+│   │       └── <run_id>/
+│   │           ├── transcript.json
+│   │           ├── assessment.json
+│   │           └── emoguard_log.json
+│   └── emoagent_v4_pilot.db
+│
+├── .env
 ├── .env.example
 ├── .gitignore
+├── requirements.txt
+├── run_agents.py
 └── README.md
 ```
+
+**Note:** The tree is representative. The exact contents of `emoguard/`, `assessment/`, and `tests/` should be checked against the current repository before treating this as a complete file inventory.
+
+Generated databases, experiment outputs, and artifacts should be kept separate from source code and excluded from Git where appropriate.
 
 ---
 
 ## Requirements
 
-- Python version supported by the project's dependencies.
+- Python 3.11 or a compatible version supported by the dependencies.
 - Git.
-- [Ollama](https://ollama.com/).
-- A compatible model downloaded into Ollama.
-- Python packages including LangGraph and the appropriate LangChain Ollama integration.
+- Ollama.
+- A locally downloaded LLM.
+- LangGraph.
+- LangChain Ollama integration.
+- SQLAlchemy.
+- Pydantic.
+- SQLite.
+- tqdm for batch progress monitoring.
+- pytest for automated tests.
 
-For reproducibility, use a tested Python environment and maintain a `requirements.txt` file.
+### Recommended local model
+
+```bash
+ollama pull llama3.1:8b
+```
+
+The default experimental model is `llama3.1:8b`, subject to the current configuration.
 
 ---
 
-## Setup and installation
+## Setup and Installation
 
 ### 1. Clone the repository
 
@@ -322,21 +541,14 @@ cd EmoAgent-Lite
 
 ### 2. Create a virtual environment
 
-**Windows — PowerShell**
+**Windows PowerShell**
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-**Windows — Command Prompt**
-
-```bat
-python -m venv .venv
-.\.venv\Scripts\activate.bat
-```
-
-**Linux / macOS**
+**Linux/macOS**
 
 ```bash
 python3 -m venv .venv
@@ -345,286 +557,438 @@ source .venv/bin/activate
 
 ### 3. Install dependencies
 
-If `requirements.txt` exists:
-
 ```bash
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-Otherwise, install the packages needed by your current implementation:
-
-```bash
-python -m pip install --upgrade pip
-pip install langgraph langchain-ollama python-dotenv
-```
-
 For development and testing:
 
 ```bash
-pip install pytest ruff
+pip install pytest tqdm
 ```
 
-Update `requirements.txt` when dependencies change.
+### 4. Install Ollama
 
-### 4. Install and configure Ollama
+Install Ollama from:
 
-Install Ollama from [ollama.com](https://ollama.com/), then download a compatible model.
+https://ollama.com/
 
-For example:
+Download the model:
 
 ```bash
 ollama pull llama3.1:8b
 ```
 
-Check the available models:
+Check installed models:
 
 ```bash
 ollama list
 ```
 
-Make sure the Ollama service is running before launching the experiment.
-
 ### 5. Configure environment variables
 
-Create a `.env` file in the project root:
+Create a `.env` file in the project root.
 
 ```dotenv
 OLLAMA_MODEL=llama3.1:8b
 OLLAMA_BASE_URL=http://localhost:11434
 ```
 
-Use the model name supported by your installation and by the model configuration in `llm/provider.py`.
-
-Do not commit `.env` files, credentials, or sensitive participant data.
+Use the exact environment variable names expected by `llm/provider.py`.
 
 ---
 
-## Running the project
+## Running the Project
 
-### Run V1 — Two-agent conversation
+### Interactive mode
 
-If the original V1 runner is still present:
-
-```bash
-python run_agent.py
-```
-
-### Run V3 — Simulated-person experiment
-
-Run the current experiment entry point:
+Launch the interactive experiment:
 
 ```bash
 python run_agents.py
 ```
 
-Follow the prompts provided by the runner to select the persona, character, dialogue style, conversation-round limit, assessment configuration, and EmoGuard setting where available.
+This mode supports interactive persona-based conversations and the available assessment and EmoGuard configuration options.
 
-The workflow can include:
+### Batch pilot mode
 
-1. Baseline PHQ-9 assessment.
-2. Optional baseline PDI topic-prototype assessment.
-3. Experiment initialization.
-4. Dialog Manager guidance.
-5. User Agent turn.
-6. Optional EmoGuard analysis and guidance.
-7. Character Agent response.
-8. Simulated-state update and per-round logging.
-9. Experiment round control.
-10. Follow-up PHQ-9 assessment.
-11. Optional follow-up PDI topic-prototype assessment.
-12. Final assessment comparison.
+The batch pilot entry point is:
 
-The precise CLI options depend on the current implementation of `run_agents.py`.
+```bash
+python tests/run_pilot.py
+```
+
+The pilot script configures the selected personas, characters, dialogue styles, replicates, conditions, and execution settings before registering and executing the experiment.
+
+The current pilot configuration uses:
+
+- 5 personas.
+- 4 characters.
+- 2 dialogue styles.
+- 1 replicate.
+- 2 conditions.
+- 6 rounds per session.
+- EmoGuard interval of 3.
+- Sequential execution.
+
+### Batch execution workflow
+
+The batch pipeline performs the following operations:
+
+1. Load synthetic persona profiles.
+2. Generate or reuse baseline assessments.
+3. Generate the experiment matrix.
+4. Validate matched-pair configurations.
+5. Register the experiment and runs in SQLite.
+6. Execute OFF and ON runs.
+7. Invoke the LangGraph conversation workflow.
+8. Generate follow-up PHQ-9 assessments.
+9. Persist transcripts, assessments, and EmoGuard logs.
+10. Update experiment and pair completion status.
+
+### Batch progress monitoring
+
+The batch runner uses `tqdm` to display execution progress, including:
+
+- Completed sessions.
+- Total sessions.
+- Progress percentage.
+- Estimated remaining time.
+- Current persona.
+- Character profile.
+- Dialogue style.
+- Replicate.
+- Experimental condition.
+
+The progress display monitors execution; it does not increase inference speed.
 
 ---
 
-## Assessments and scoring
+## Experiment Configuration
+
+Batch experiments are defined using `BatchConfig`.
+
+An illustrative configuration:
+
+```python
+from dataclasses import replace
+from batch.config import BatchConfig
+
+config = replace(
+    BatchConfig(),
+    config_id="emoagent-v4.3-pilot-5p-r1-6rounds",
+    experiment_name="EmoAgent-Lite Pilot",
+    persona_count=5,
+    character_ids=(
+        "alex",
+        "demon",
+        "joker",
+        "sukuna",
+    ),
+    replicates=1,
+    dialogue_styles=("meow", "roar"),
+    conditions=("off", "on"),
+    max_rounds=6,
+    assessments=("phq9",),
+    emoguard_interval=3,
+    max_concurrent_runs=1,
+    model_name="llama3.1:8b",
+)
+```
+
+The configuration is registered and persisted with a unique `config_id`.
+
+**Important:** If an experiment configuration changes, use a new `config_id`. This preserves experiment history and prevents different configurations from being mixed.
+
+### Matched-pair design
+
+Each pair contains:
+
+- The same synthetic persona.
+- The same character.
+- The same dialogue style.
+- The same replicate.
+- The same baseline assessment.
+- The same initial simulated state.
+
+The OFF and ON runs receive independent conversation states.
+
+The execution order is alternated across pairs to reduce systematic order effects.
+
+### Sequential execution
+
+The pilot initially uses:
+
+```python
+max_concurrent_runs=1
+```
+
+This avoids running multiple LLM-heavy experiments simultaneously on limited GPU memory.
+
+Concurrency can be reconsidered after measuring memory usage and inference stability.
+
+---
+
+## Assessments and Evaluation
 
 ### PHQ-9
 
-The prototype generates nine synthetic responses, with each item scored from 0 to 3. The total ranges from 0 to 27.
+The batch experiment uses PHQ-9 as its primary synthetic assessment.
 
-**Score change = Follow-up score − Baseline score**
+Each of the nine items receives a score from 0 to 3.
 
-- A positive change means the synthetic score increased.
-- A negative change means the synthetic score decreased.
-- Zero means the synthetic totals are unchanged.
+$$
+S_{\mathrm{PHQ9}} = \sum_{i=1}^{9} r_i
+$$
 
-The score difference describes the output of the simulation only. It does not establish that a conversation caused a mental-health improvement or deterioration.
+The total score ranges from 0 to 27.
 
-### PDI-21 topic prototype
+Score change:
 
-The optional PDI component uses 21 topic-based prompts inspired by the domains of the Peters Delusions Inventory. It is a prototype, not an official standardized questionnaire administration.
+$$
+\Delta S = S_{\mathrm{final}} - S_{\mathrm{initial}}
+$$
 
-The current record structure includes:
+- Positive: simulated score increased.
+- Negative: simulated score decreased.
+- Zero: no change in the total score.
 
-- Instrument and version metadata.
-- Assessment phase and data type.
-- Whether administration is standardized.
-- Individual synthetic responses.
-- Endorsement, distress, preoccupation, and conviction values.
-- Aggregate prototype scores.
+These are simulated assessment responses, not clinical measurements.
 
-These prototype scores must not be compared with validated clinical norms or treated as diagnostic findings.
+### Baseline reuse
 
-### Unified assessment records
+Baseline assessments are generated or retrieved before batch execution.
 
-Assessment outputs are organized by phase and instrument in `assessment_records`, allowing baseline and follow-up data to be retrieved consistently.
+For matched OFF/ON runs, the same baseline assessment is reused. This ensures that the comparison begins from the same assessment record.
 
-Example structure:
+The pilot with five personas and one replicate requires five baseline assessments.
 
-```python
-{
-    "baseline": {
-        "phq9": {
-            "instrument": "PHQ-9",
-            "phase": "baseline",
-            "data_type": "synthetic",
-            "responses": [],
-            "scores": {"total": 0}
-        },
-        "pdi": {
-            "instrument": "PDI-21-topic-prototype",
-            "phase": "baseline",
-            "data_type": "synthetic",
-            "standardized_administration": False,
-            "responses": [],
-            "scores": {}
-        }
-    },
-    "followup": {}
-}
+### PDI-21
+
+An optional PDI-21 topic prototype exists in the interactive implementation.
+
+The current batch experiment uses PHQ-9 only.
+
+The PDI prototype is not an official standardized administration and should not be interpreted using clinical norms.
+
+### Additional evaluation metrics
+
+The framework can support further analysis of:
+
+- Mean baseline and follow-up PHQ-9 scores.
+- Mean score change.
+- Standard deviation of score changes.
+- Matched-pair differences.
+- EmoGuard intervention counts.
+- Intervention rounds.
+- Character-dependent score changes.
+- Dialogue-style-dependent variations.
+
+---
+
+## EmoGuard ON/OFF Comparison
+
+### OFF condition
+
+- EmoGuard is disabled.
+- The User Agent generates the synthetic persona's response.
+- The Dialog Manager provides conversation guidance.
+- The Character Agent generates a reply.
+- The simulated state is updated.
+- No EmoGuard intervention is recorded.
+
+### ON condition
+
+- EmoGuard is enabled.
+- The User Agent generates the synthetic persona's response.
+- The Dialog Manager provides conversation guidance.
+- EmoGuard runs at the configured interval.
+- Its four components generate and consolidate safety guidance.
+- The Character Agent uses the guidance when generating its reply.
+- The simulated state and intervention information are recorded.
+
+### Intervention scheduling
+
+With six rounds and an interval of three:
+
+```text
+Round 1: No intervention
+Round 2: No intervention
+Round 3: EmoGuard intervention
+Round 4: No intervention
+Round 5: No intervention
+Round 6: EmoGuard intervention
 ```
 
-The example illustrates the organization, not a real assessment result. Actual fields and values are determined by the assessment implementation.
+Expected intervention rounds:
+
+```python
+[3, 6]
+```
+
+The OFF condition should have no intervention rounds.
+
+The batch result validator checks the expected intervention schedule for completed runs.
 
 ---
 
-## EmoGuard ON/OFF comparison
+## Database and Experiment Artifacts
 
-EmoGuard can be enabled or disabled to compare the conversation workflow with and without its guidance.
+V4 uses SQLite and SQLAlchemy for persistent experiment management.
 
-### EmoGuard OFF
+### Database models
 
-- The User Agent generates the simulated person's turn.
-- The pre-response state is captured.
-- The Character Agent responds using the character profile, dialogue style, and Dialog Manager guidance.
-- The simulated state is updated.
-- The logger records the before/after state and the configuration.
+The storage layer includes:
 
-### EmoGuard ON
-
-- The User Agent generates the simulated person's turn.
-- The pre-response state is captured.
-- The Emotion Watcher analyzes possible emotional signals.
-- The Thought Refiner identifies possible assumptions or interpretations to explore.
-- The Dialog Guide suggests a supportive response strategy.
-- The EmoGuard Manager consolidates the suggestions.
-- The Character Agent responds using the consolidated guidance.
-- The simulated state is updated and logged.
-
-### Example log fields
-
-Each completed round can record:
-
-| Field | Description |
+| Model | Purpose |
 |---|---|
-| `round` | Conversation-round identifier. |
-| `emoguard_enabled` | Whether EmoGuard was enabled. |
-| `user_turn` | The simulated person's latest message. |
-| `character_reply` | The character's response. |
-| `state_before` | Simulated state captured before the character responds. |
-| `state_after` | Simulated state generated after the exchange. |
-| `module_outputs` | Emotion Watcher, Thought Refiner, and Dialog Guide outputs when enabled. |
-| `character_guidance` | Consolidated EmoGuard Manager recommendations when enabled. |
+| `Persona` | Stores synthetic persona information and profile hashes. |
+| `ExperimentConfig` | Stores experiment configuration and configuration hashes. |
+| `BaselineAssessment` | Stores reusable baseline assessment records. |
+| `ExperimentPair` | Stores matched OFF/ON experiment pairs. |
+| `ExperimentRun` | Stores individual experiment execution records. |
+| `ExperimentArtifact` | Stores references and data for generated experiment artifacts. |
 
-This structure supports later analysis of simulated-state changes, response differences, and module behavior.
+### Artifact structure
 
-For fairer comparisons, keep the model, persona, character, dialogue style, and other experiment settings fixed. Repeat runs where practical because language-model outputs may vary between runs.
+Each run produces structured artifacts under:
 
----
+```text
+results/artifacts/
+└── <config_id>/
+    └── <run_id>/
+        ├── transcript.json
+        ├── assessment.json
+        └── emoguard_log.json
+```
 
-## Troubleshooting
+**transcript.json**
 
-### Ollama connection error
+Contains the conversation history and relevant execution information.
 
-- Verify that Ollama is installed and running.
-- Check `OLLAMA_BASE_URL` in `.env`.
-- Run `ollama list` and confirm the selected model is installed.
+**assessment.json**
 
-### Python cannot find a package
+Contains baseline and follow-up assessment information.
 
-- Activate the project's virtual environment.
-- Install the missing package in that environment.
-- Confirm the Python interpreter selected by your IDE.
+**emoguard_log.json**
 
-### Persona or character profile not found
+Contains EmoGuard intervention information, including scheduled rounds and module outputs where applicable.
 
-- Confirm that the persona exists in the configured persona data.
-- Check the character profile directory and filename.
-- Verify that file paths are resolved relative to the project directory.
+### Crash recovery
 
-### Invalid JSON from the LLM
+The batch system supports recovery of incomplete experiments.
 
-Language models may return explanatory text, Markdown fences, or malformed JSON when a node expects structured output.
+- Completed runs are not unnecessarily re-executed.
+- Failed runs are recorded.
+- Stale or incomplete runs can be identified.
+- Existing experiment pairs can be resumed.
+- Previously saved artifacts remain available.
 
-- Instruct the model to return only the required JSON structure.
-- Use structured-output support when compatible with the model and integration.
-- Validate parsed results before adding them to graph state.
-- Use bounded retries and clear error messages where appropriate.
-- Log malformed outputs carefully, without exposing sensitive information.
+### Persona integrity
 
-### EmoGuard does not run
+Persona records use profile hashing to detect changes.
 
-- Confirm that EmoGuard is enabled in the experiment configuration.
-- Check that `emoguard/nodes.py` exists and imports successfully.
-- Confirm that the conditional edge routes to `emotion_watcher` when enabled.
-- Verify that the pipeline connects to `character_agent` and then to the normal state-update path.
+If a persona profile differs from the previously stored version, the storage layer rejects the mismatch rather than silently overwriting the existing record.
 
-### PDI results are missing
-
-- Confirm that `"pdi"` is included in `enabled_assessments`.
-- Check the baseline and follow-up PDI routing functions.
-- Verify that the PDI assessment nodes merge their results into `assessment_records`.
-- Confirm that the finalization code preserves the assessment records.
-
-### Final scores are missing
-
-- Check the return value from `manager_finalize()`.
-- Confirm that the runner extracts the final graph state or streamed updates correctly.
-- Verify that the output code reads the current `experiment_result` and assessment-record structure.
+Use a separate database for a new experimental dataset or configuration when appropriate. Do not delete existing experiment databases merely to resolve a persona mismatch.
 
 ---
 
-## Safety, privacy, and limitations
+## Testing
 
-EmoAgent Lite is a software research prototype, not a mental-health treatment, diagnostic system, or validated clinical decision-support tool.
+V4 includes automated tests for the experiment and persistence infrastructure.
 
-- Use fictional or appropriately consented data.
-- Avoid committing identifiable or sensitive participant information.
-- Define data-retention, access, and deletion policies before storing sensitive information.
-- Keep assessment records separate from conversational messages where appropriate.
-- Treat simulated distress, mood, and stress values as model-generated state features, not validated psychometric measures.
-- Treat EmoGuard outputs as advisory hypotheses, not established facts about a person's emotional or cognitive state.
-- Do not assume a belief is pathological based on cultural, religious, or personal differences alone.
-- Avoid designing character behavior to manipulate vulnerabilities or encourage self-harm.
-- Treat safety-review flags as signals for review rather than diagnoses.
-- Evaluate technical performance separately from any claims about clinical effectiveness.
+Run the test suite:
 
-## Future development
+```bash
+pytest -v
+```
+
+Tests cover areas such as:
+
+- Experiment matrix generation.
+- Matched-pair validation.
+- Configuration validation.
+- Baseline generation and reuse.
+- Database registration.
+- Experiment-run validation.
+- Artifact persistence.
+- Intervention-round validation.
+- Run completion and failure handling.
+- Crash recovery.
+
+For a focused test:
+
+```bash
+pytest tests/test_batch_results.py -v
+```
+
+Use the actual test filenames present in the repository.
+
+---
+
+## Development History
+
+The following milestones are reflected in the recent Git history.
+
+| Version / milestone | Date | Development |
+|---|---|---|
+| V4.1 | Oct 31, 2026 | Added database layer. |
+| V4.2.1 | Nov 1, 2026 | Interactive workflow updated for batch compatibility. |
+| V4.2.2 | Nov 1, 2026 | Added batch package. |
+| V4.2.3 | Nov 1, 2026 | Added batch execution files and tested them. |
+| V4.3 | Nov 2, 2026 | Pilot testing. |
+
+### Recent Git commits
+
+```text
+V4.3 Pilot Testing
+
+V4.2.3 added batch files and test it
+V4.2.2 added batch folder
+V4.2.1 Interactive with batch updation
+Added tests dir
+V4.1 Added database layer
+```
+
+---
+
+## Safety, Privacy, and Limitations
+
+EmoAgent-Lite is a research prototype, not a clinical diagnosis, treatment, or mental-health intervention system.
+
+- Experiments use synthetic personas rather than real patients.
+- Simulated PHQ-9 responses are not clinical measurements.
+- Score changes do not establish therapeutic effectiveness.
+- The current batch implementation uses PHQ-9 only.
+- The system uses Llama 3.1 8B instead of the original framework's proprietary models.
+- The implementation is an independent reproduction, not an exact replication.
+- EmoGuard outputs are experimental LLM-generated suggestions, not validated safety assessments.
+- The current ablation compares the complete EmoGuard pipeline ON versus OFF; it does not isolate individual module contributions.
+- Experiments are initially sequential due to limited computational resources.
+- The larger 100-persona benchmark remains planned work.
+
+---
+
+## Future Development
 
 Potential directions include:
 
-- More reliable structured-output handling and error recovery.
-- Persistent experiment storage and reproducible run configurations.
-- Automated test suites and larger synthetic-persona benchmarks.
-- Comparative evaluation of language models.
-- Quantitative evaluation of EmoGuard ON/OFF behavior.
-- EmoEval criteria, benchmark cases, and reporting.
-- API and frontend integration.
-- Experiment tracing and performance dashboards.
+- Completing and analysing the V4.3 pilot.
+- Extending the experiment to 100 synthetic personas and three replicates.
+- Module-wise EmoGuard ablation.
+- Character-dependent risk analysis.
+- Dialogue-style-dependent comparisons.
+- Improved experiment visualization and reporting.
+- Parallel execution and inference optimization.
+- Additional assessment prototypes.
+- More systematic response-level safety evaluation.
+- Improved structured-output validation and error recovery.
+- Optional integration with experiment-tracing and observability tools.
+
+---
 
 ## License
 
-No license has been specified yet.
+No license yet
